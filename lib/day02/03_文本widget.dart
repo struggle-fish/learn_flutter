@@ -52,26 +52,26 @@ class TextRichDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text.rich(
-      TextSpan(
-          text: '你找事儿',
-          children: [
-            TextSpan(
-              text: '哈哈哈',
-              style: TextStyle(color: Colors.red)
-            ),
-            TextSpan(
-                text: '哈哈哈2',
-                style: TextStyle(color: Colors.yellow)
-            ),
-            WidgetSpan(
-                child: Icon(Icons.favorite, color: Colors.red)
-            ),
-            TextSpan(
-                text: '哈哈哈3',
-                style: TextStyle(color: Colors.green)
-            )
-          ]
-      )
+        TextSpan(
+            text: '你找事儿',
+            children: [
+              TextSpan(
+                  text: '哈哈哈',
+                  style: TextStyle(color: Colors.red)
+              ),
+              TextSpan(
+                  text: '哈哈哈2',
+                  style: TextStyle(color: Colors.yellow)
+              ),
+              WidgetSpan(
+                  child: Icon(Icons.favorite, color: Colors.red)
+              ),
+              TextSpan(
+                  text: '哈哈哈3',
+                  style: TextStyle(color: Colors.green)
+              )
+            ]
+        )
     );
   }
 }

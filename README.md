@@ -36,7 +36,7 @@
 - `stl` 快速生成 StatelessWidget
 - `option + enter` 设置包裹 Container
 - `option + command + b` 可以查看实现类
-- `option + enter + w` 将build 出来的widget 抽取到文件
+- `option + command + w` 将build 出来的widget 抽取到文件
 
 
 
