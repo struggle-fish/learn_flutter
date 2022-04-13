@@ -9,8 +9,22 @@ class ButtonDemo extends StatelessWidget {
     return Column(
       children: [
         ElevatedButton(
+          child: Text('ElevatedButton1'),
+          style: ButtonStyle(
+            // padding: MaterialStateProperty.all(EdgeInsets.zero), // 清空左右padding
+            // minimumSize: MaterialStateProperty.all(Size.zero), // 清空上下padding
+            tapTargetSize: MaterialTapTargetSize.shrinkWrap, // 去掉外边距
+            // fixedSize: MaterialStateProperty.all(Size(100, 30)),
+            foregroundColor: MaterialStateProperty.all(Colors.red),
+            textStyle: MaterialStateProperty.all(TextStyle(fontSize: 20)),
+          ),
+          onPressed: (){
+          },
+        ),
+        ElevatedButton(
           child: Text('ElevatedButton'),
           style: ButtonStyle(
+            // tapTargetSize: MaterialTapTargetSize.shrinkWrap, // 去掉外边距
             foregroundColor: MaterialStateProperty.all(Colors.red),
             textStyle: MaterialStateProperty.all(TextStyle(fontSize: 20)),
           ),

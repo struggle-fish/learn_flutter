@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:learn_flutter/day02/04_ButtonDemo.dart';
+import 'package:learn_flutter/day02/05_ImageDemo.dart';
+import 'package:learn_flutter/day02/06_TextFileDemo.dart';
 
 void main() => runApp(
     MyApp()
@@ -44,11 +45,23 @@ class HomeContent extends StatefulWidget {
 }
 
 class _HomeContentState extends State<HomeContent> {
+  final imageURL = 'https://club2.autoimg.cn/album/g26/M02/4C/44/userphotos/2020/07/25/10/820_ChwFkF8bniOAU_8EAJavO73o2KM848.jpg';
+
+
+  final usernameTextEditController = TextEditingController();
+  final passwordTextEditController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
-    return ButtonDemo();
+
+    return TextFiledDemo();
   }
 }
+
+
+
+
+
 
 
 
