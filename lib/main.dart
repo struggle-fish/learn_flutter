@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:learn_flutter/day02/05_ImageDemo.dart';
 import 'package:learn_flutter/day02/06_TextFileDemo.dart';
+import 'package:learn_flutter/day02/07_LayoutDemo1.dart';
+import 'package:learn_flutter/day02/08_RowDemo.dart';
 
 void main() => runApp(
     MyApp()
@@ -53,17 +56,9 @@ class _HomeContentState extends State<HomeContent> {
 
   @override
   Widget build(BuildContext context) {
-
-    return TextFiledDemo();
+    return Text('你好全世界');
   }
 }
-
-
-
-
-
-
-
 
 
 
