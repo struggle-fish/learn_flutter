@@ -1,10 +1,17 @@
 
 import 'package:flutter/material.dart';
 
-class StackDemo2 extends StatelessWidget {
+class StackDemo2 extends StatefulWidget {
   const StackDemo2({
     Key? key,
   }) : super(key: key);
+
+  @override
+  State<StackDemo2> createState() => _StackDemo2State();
+}
+
+class _StackDemo2State extends State<StackDemo2> {
+  bool _isfavorite = false;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +25,23 @@ class StackDemo2 extends StatelessWidget {
           child: Container(
             padding: EdgeInsets.all(8),
             color: Color.fromARGB(150, 0, 0, 0),
-            child: Text('你好全世界', style: TextStyle(color: Colors.white),),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text('你好全世界', style: TextStyle(color: Colors.white),),
+                IconButton(
+                    onPressed: () {
+                      setState(() {
+                        _isfavorite = !_isfavorite;
+                      });
+                    },
+                    icon: Icon(
+                      Icons.favorite,
+                      color: _isfavorite ? Colors.red : Colors.white
+                    )
+                )
+              ],
+            ),
           ),
         )
       ],

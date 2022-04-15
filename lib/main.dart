@@ -1,9 +1,12 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:learn_flutter/day02/05_ImageDemo.dart';
 import 'package:learn_flutter/day02/06_TextFileDemo.dart';
 import 'package:learn_flutter/day02/07_LayoutDemo1.dart';
 import 'package:learn_flutter/day02/08_RowDemo.dart';
+import 'package:learn_flutter/day02/09_StackDemo.dart';
 
 void main() => runApp(
     MyApp()
@@ -31,11 +34,6 @@ class ZYHomePage extends StatelessWidget {
         title: Text('基础widget2111'),
       ),
       body: HomeContent(),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
-        onPressed: (){}
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 }
@@ -48,7 +46,7 @@ class HomeContent extends StatefulWidget {
 }
 
 class _HomeContentState extends State<HomeContent> {
-  final imageURL = 'https://club2.autoimg.cn/album/g26/M02/4C/44/userphotos/2020/07/25/10/820_ChwFkF8bniOAU_8EAJavO73o2KM848.jpg';
+  final imageURL = 'https://club2.autoimg.cn/a lbum/g26/M02/4C/44/userphotos/2020/07/25/10/820_ChwFkF8bniOAU_8EAJavO73o2KM848.jpg';
 
 
   final usernameTextEditController = TextEditingController();
@@ -56,7 +54,8 @@ class _HomeContentState extends State<HomeContent> {
 
   @override
   Widget build(BuildContext context) {
-    return Text('你好全世界');
+
+    return  Text('你好全世界');
   }
 }
 
