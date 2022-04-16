@@ -1,72 +1,98 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:learn_flutter/day02/05_ImageDemo.dart';
-import 'package:learn_flutter/day02/06_TextFileDemo.dart';
-import 'package:learn_flutter/day02/07_LayoutDemo1.dart';
-import 'package:learn_flutter/day02/08_RowDemo.dart';
-import 'package:learn_flutter/day02/09_StackDemo.dart';
+import 'package:learn_flutter/demo/02_listViewDemo.dart';
+import 'package:learn_flutter/demo/03_DrawerDemo.dart';
+import 'package:learn_flutter/demo/04_BottonNavigationBarDemo.dart';
 
-void main() => runApp(
-    MyApp()
-);
-
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: ZYHomePage(),
-    );
-  }
+main() {
+  runApp(
+    App()
+  );
 }
 
-class ZYHomePage extends StatelessWidget {
-  const ZYHomePage({Key? key}) : super(key: key);
+
+
+
+
+class App extends StatelessWidget {
+  const App({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('基础widget2111'),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Home(),
+      theme: ThemeData(
+          primarySwatch: Colors.yellow, // 主题颜色
+          highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
+          splashColor: Colors.white60,
       ),
-      body: HomeContent(),
     );
   }
 }
 
-class HomeContent extends StatefulWidget {
-  const HomeContent({Key? key}) : super(key: key);
+class Home extends StatelessWidget {
 
-  @override
-  State<HomeContent> createState() => _HomeContentState();
-}
-
-class _HomeContentState extends State<HomeContent> {
-  final imageURL = 'https://club2.autoimg.cn/a lbum/g26/M02/4C/44/userphotos/2020/07/25/10/820_ChwFkF8bniOAU_8EAJavO73o2KM848.jpg';
-
-
-  final usernameTextEditController = TextEditingController();
-  final passwordTextEditController = TextEditingController();
+  const Home({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-
-    return  Text('你好全世界');
+    return DefaultTabController(
+        length: 3,
+        child: Scaffold(
+          backgroundColor: Colors.grey[100],
+          appBar: AppBar(
+            title: Text('Flutter02'),
+            // leading: IconButton(
+            //   icon: Icon(
+            //     Icons.menu,
+            //   ),
+            //   tooltip: 'Navigration',
+            //   onPressed: () {
+            //     debugPrint('Navigration被点击了');
+            //   },
+            // ),
+            actions: [
+              IconButton(
+                icon: Icon(
+                  Icons.search,
+                ),
+                tooltip: 'Search',
+                onPressed: () {
+                  debugPrint('Search被点击了');
+                },
+              )
+            ],
+            elevation: 30,
+            bottom: TabBar(
+              unselectedLabelColor: Colors.black12,
+              indicatorColor: Colors.black54,
+              indicatorSize:  TabBarIndicatorSize.label,
+              tabs: [
+                Tab(
+                    icon: Icon(Icons.local_florist)
+                ),
+                Tab(
+                    icon: Icon(Icons.change_history)
+                ),
+                Tab(
+                    icon: Icon(Icons.directions_bike)
+                )
+              ],
+            ),
+          ),
+          body: TabBarView(
+            children: [
+              ListViewDemo(),
+              Icon(Icons.change_history, size: 128, color: Colors.black12,),
+              Icon(Icons.directions_bike, size: 128, color: Colors.black12,)
+            ],
+          ),
+          drawer: DrawerDemo(),
+          bottomNavigationBar: BottomNavigationBarDemo(),
+        )
+    );
   }
 }
-
-
-
-
-
-
-
-
-
 
 
 
