@@ -6,6 +6,7 @@ import 'package:learn_flutter/demo/05_BasicDemo.dart';
 import 'package:learn_flutter/demo/06_LayoutDemo.dart';
 import 'package:learn_flutter/demo/07_ViewDemo.dart';
 import 'package:learn_flutter/demo/08_SliverViewDemo.dart';
+import 'package:learn_flutter/demo/09_NavigatorDemo.dart';
 
 main() {
   runApp(
@@ -24,7 +25,13 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Home(),
+      // home: Home(),
+      // home: NavigatorDemo(),
+      initialRoute: '/', // 初始路由
+      routes: {
+        '/': (context) => Home(),
+        '/about': (context) => PageViewRouteDemo(title: '你好'),
+      },
       theme: ThemeData(
           primarySwatch: Colors.yellow, // 主题颜色
           highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
