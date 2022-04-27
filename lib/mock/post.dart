@@ -4,6 +4,7 @@ class Post {
   final String imageUrl;
   final String description;
 
+
   Post({
     this.title = '',
     this.author = '',
@@ -11,10 +12,10 @@ class Post {
     this.description = '',
   });
 
-
+  bool selected = false;
 }
 
-final List<Post> posts = [
+final List<Post>  posts = [
   Post(
     title: 'Candy Shop',
     author: 'Mohamed Chahin',
