@@ -9,6 +9,7 @@ import 'package:learn_flutter/demo/08_SliverViewDemo.dart';
 import 'package:learn_flutter/demo/09_NavigatorDemo.dart';
 import 'package:learn_flutter/demo/10_FormDemo.dart';
 import 'package:learn_flutter/demo/11_ComponentViewDemo.dart';
+import 'package:learn_flutter/demo/20_StateManagement.dart';
 
 main() {
   runApp(
@@ -29,12 +30,13 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       // home: Home(),
       // home: NavigatorDemo(),
-      initialRoute: '/button', // 初始路由
+      initialRoute: '/stateManagement', // 初始路由
       routes: {
         '/': (context) => Home(),
         '/about': (context) => PageViewRouteDemo(title: '你好'),
         '/form': (context) => FormDemo(),
-        '/button': (context) => ComponentViewDemo()
+        '/button': (context) => ComponentViewDemo(),
+        '/stateManagement': (contenxt) => StateManagementDemo(),
       },
       theme: ThemeData(
           // primarySwatch: Colors.yellow, // 主题颜色
