@@ -26,6 +26,9 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
 
 
 ### 生命周期
+
+生命周期本质上是回调函数, 主要是讨论 StatefulWidget 的生命周期，从创建到销毁的过程。
+
 - 作用
     - 初始化数据
     - 发送网络请求

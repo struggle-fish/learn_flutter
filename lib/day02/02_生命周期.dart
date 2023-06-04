@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(
-    MyApp()
-);
+// void main() => runApp(
+//     MyApp()
+// );
 
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class LifeCycle extends StatelessWidget {
+  const LifeCycle({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,9 +29,10 @@ class _ZYHomePageState extends State<ZYHomePage> {
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: AppBar(
-        title: Text('商品列表'),
+        title: Text('生命周期'),
       ),
       body: Column(
+
         children: [
           HomeContent() // 每次都是新的时候，就会触发didUpdateWidget
         ],
@@ -41,7 +42,8 @@ class _ZYHomePageState extends State<ZYHomePage> {
             setState(() {
             });
           },
-          icon: Icon(Icons.add), label: Text('添加啊')),
+          icon: Icon(Icons.add),
+          label: Text('添加啊')),
     );
   }
 }
@@ -49,12 +51,12 @@ class _ZYHomePageState extends State<ZYHomePage> {
 
 class HomeContent extends StatefulWidget {
   HomeContent() {
-    print('1---调用HomeContent的constructor');
+    print('生命周期-1---调用HomeContent的constructor');
   }
 
   @override
   State<HomeContent> createState() {
-    print('2---调用HomeContent的createState方法');
+    print('生命周期-2---调用HomeContent的createState方法');
     return _HomeContentState();
   }
 }
@@ -63,12 +65,12 @@ class _HomeContentState extends State<HomeContent> {
   int _counter = 0;
 
   _HomeContentState() {
-    print('3---调用_HomeContentState的constructor');
+    print('生命周期-3---调用_HomeContentState的constructor');
   }
 
   @override
   void initState() {
-    print('4---调用initState');
+    print('生命周期-4---调用initState');
     // 这里必须调用 super
     super.initState();
   }
@@ -76,28 +78,36 @@ class _HomeContentState extends State<HomeContent> {
   @override
   void didUpdateWidget(covariant HomeContent oldWidget) {
     // TODO: implement didUpdateWidget
-    // 这个没演示成功
-    print('----didUpdateWidget---用的比较少');
+    print('生命周期-----didUpdateWidget---用的比较少');
     super.didUpdateWidget(oldWidget);
   }
 
   @override
   void didChangeDependencies() {
     // TODO: implement didChangeDependencies
-    print('---状态依赖更新');
+    print('生命周期----状态依赖更新');
     super.didChangeDependencies();
   }
 
   @override
   Widget build(BuildContext context) {
-    print('5---调用build');
+    print('生命周期-5---调用build');
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        ElevatedButton(onPressed: () {
-          setState(() {
-            _counter++;
-          });
-        }, child: Text('点击')),
+        ElevatedButton(
+          onPressed: () {
+            setState(() {
+              _counter++;
+            });
+          },
+          child: Column(
+            children: [
+              Icon(Icons.favorite),
+              Text('点击')
+            ],
+          )
+        ),
         Text('当前数字${_counter}')
       ],
     );
