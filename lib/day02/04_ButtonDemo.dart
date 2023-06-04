@@ -1,4 +1,22 @@
 import 'package:flutter/material.dart';
+
+class BasicButtonDemo extends StatelessWidget {
+  const BasicButtonDemo({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('按钮Widget'),
+        ),
+        body: ButtonDemo(),
+      ),
+    );
+  }
+}
+
+
 class ButtonDemo extends StatelessWidget {
   const ButtonDemo({
     Key? key,
@@ -61,7 +79,7 @@ class ButtonDemo extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               Icon(Icons.favorite, color: Colors.red),
-              Text('喜欢作者1')
+              Text('喜欢作者11')
             ],
           ),
           onPressed: () {},

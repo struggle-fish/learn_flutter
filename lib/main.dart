@@ -6,7 +6,8 @@ import 'package:flutter/material.dart';
 // ---------------------------------------------------------------------------
 // import 'package:learn_flutter/day02/01_StatefulWidget.dart';
 // import 'package:learn_flutter/day02/02_生命周期.dart';
-import 'package:learn_flutter/day02/03_文本widget.dart';
+// import 'package:learn_flutter/day02/03_文本widget.dart';
+import 'package:learn_flutter/day02/04_ButtonDemo.dart';
 // ---------------------------------------------------------------------------
 
 import 'package:learn_flutter/demo/02_ListViewDemo.dart';
@@ -29,7 +30,8 @@ main() {
       // ListImageDemo()
       // StatefulWidgetDemo()
       // LifeCycle()
-      TextWidgetDemo()
+      // TextWidgetDemo()
+      BasicButtonDemo()
   );
 }
 

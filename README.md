@@ -74,6 +74,12 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
 - Text.rich  丰富的文本 可以加图 加文字等等  图文混排
 - TextSpan 文本片段
 - TextStyle 文本样式
+- TextButton 文本按钮
+- ButtonStyle 按钮样式
+- ElevatedButton 圆角按钮
+- OutlinedButton 边框按钮
+- FloatingActionButton  悬浮按钮
+- RoundedRectangleBorder 创建带圆角的矩形边框  可以自定义按钮
 - WidgetSpan 空 span 吧，可以包裹图标
 - Checkbox 单选框
 - Image.network 网络图片
@@ -84,12 +90,14 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
 
 - Colors 颜色 如 Colors.red
 - MainAxisAlignment 主轴控制 类似 flex
+- MainAxisSize 设置主轴占多大 默认是整行  MainAxisSize.min 
 - CrossAxisAlignment 交叉轴控制 如 end start等  
 - setState 状态同步
 - EdgeInsets.only 内边距设置 类似于 padding
 - Icons 提供各种 icon 图标 如 Icons.add
 - TextAlign 文本属性设置 如 TextAlign.center
 - TextOverflow.ellipsis 超出省略 ...
+- BorderRadius 圆角 如 BorderRadius.circular(4)
 
 
 
