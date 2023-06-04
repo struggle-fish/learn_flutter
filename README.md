@@ -47,7 +47,7 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
 
 - `stl` 快速生成 StatelessWidget
 - `option + enter` 设置包裹 Container
-- `option + command + b` 可以查看实现类
+- `option + command + b` 可以查看所属的所有实现类
 - `option + command + w` 将build 出来的widget 抽取到文件（快捷键不好使，所以鼠标右击吧）
 
 
@@ -70,8 +70,11 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
 - SizedBox 尺寸盒子（设置间距）
 - Border.all 设置边框  
 - ListView 列表
-- Text 文本
+- Text 文本 内部是调用的 RichText
+- Text.rich  丰富的文本 可以加图 加文字等等  图文混排
+- TextSpan 文本片段
 - TextStyle 文本样式
+- WidgetSpan 空 span 吧，可以包裹图标
 - Checkbox 单选框
 - Image.network 网络图片
 
@@ -85,6 +88,9 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
 - setState 状态同步
 - EdgeInsets.only 内边距设置 类似于 padding
 - Icons 提供各种 icon 图标 如 Icons.add
+- TextAlign 文本属性设置 如 TextAlign.center
+- TextOverflow.ellipsis 超出省略 ...
+
 
 
 

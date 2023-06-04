@@ -23,7 +23,7 @@ class ZYHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('基础widget2111'),
+        title: Text('文本widget'),
       ),
       body: HomeContent(),
     );
@@ -40,7 +40,13 @@ class HomeContent extends StatefulWidget {
 class _HomeContentState extends State<HomeContent> {
   @override
   Widget build(BuildContext context) {
-    return TextRichDemo();
+    return Column(
+        // mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        TextRichDemo(),
+        TextDemo()
+      ],
+    );
   }
 }
 
@@ -53,10 +59,10 @@ class TextRichDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text.rich(
         TextSpan(
-            text: '你找事儿',
+            text: '你找事找事找事找事找事找事儿2',
             children: [
               TextSpan(
-                  text: '哈哈哈',
+                  text: '哈哈哈11走一个吧你去哪里呢，不知的啊，管他呢',
                   style: TextStyle(color: Colors.red)
               ),
               TextSpan(
@@ -71,7 +77,8 @@ class TextRichDemo extends StatelessWidget {
                   style: TextStyle(color: Colors.green)
               )
             ]
-        )
+        ),
+        textAlign: TextAlign.left,
     );
   }
 }
