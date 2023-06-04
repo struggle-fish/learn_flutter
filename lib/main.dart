@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+
+import 'package:learn_flutter/day01/Index.dart';
+
 import 'package:learn_flutter/demo/02_ListViewDemo.dart';
 import 'package:learn_flutter/demo/03_DrawerDemo.dart';
 import 'package:learn_flutter/demo/04_BottonNavigationBarDemo.dart';
@@ -11,9 +14,34 @@ import 'package:learn_flutter/demo/10_FormDemo.dart';
 import 'package:learn_flutter/demo/11_ComponentViewDemo.dart';
 import 'package:learn_flutter/demo/20_StateManagement.dart';
 
-main() {
+
+// main() {
+//   runApp(
+//     Day01App()
+//     // App()
+//   );
+// }
+
+
+void main() {
+  // 1. TODO: 全局函数 runApp 在 material 里提供
   runApp(
-    App()
+      MaterialApp(
+          home: Scaffold(
+            appBar: AppBar(
+                title: Text('第一个Flutter')
+            ),
+            body: Center(
+                child: Text(
+                  'hello world',
+                  style: TextStyle(
+                      fontSize: 30,
+                      color: Colors.red
+                  ),
+                )
+            ),
+          )
+      )
   );
 }
 

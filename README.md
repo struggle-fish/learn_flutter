@@ -18,7 +18,7 @@
 - 有状态的 Widget : StatefulWidget 在运行过程中有一些状态（data）需要改变
 - 无状态的 Widget : StatelessWidget 内容是确定的没有状态
 
-在Flutter 开发中所有的 Widget 都不能定义状态
+Flutter 中万物皆是 Widget , 在 Flutter 开发中所有的 Widget 都不能定义状态
 
 
 ### 生命周期
@@ -36,6 +36,27 @@
 - `option + enter` 设置包裹 Container
 - `option + command + b` 可以查看实现类
 - `option + command + w` 将build 出来的widget 抽取到文件（快捷键不好使，所以鼠标右击吧）
+
+
+### 一些常用 Widget 
+
+注意以下的都是 Widget , 调用的时候都是 XXX() 去调用的
+
+- MaterialApp 谷歌提示的设计风格
+- Scaffold 脚手架 快速搭建页面
+- AppBar 顶部导航
+- Center 居中
+- Text 文本
+- TextStyle 文本样式
+
+
+### 常用的一些类
+
+以下的都是些常用的方法类
+
+- Colors 颜色
+
+
 
 
 ### 使用本地图片
