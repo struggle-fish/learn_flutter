@@ -48,12 +48,18 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
 - MaterialApp 谷歌提示的设计风格
 - Scaffold 脚手架 快速搭建页面
 - AppBar 顶部导航
+- Container 包裹 
 - Center 居中
 - Row 一行
+- Column 垂直排列
+- BoxDecoration 盒子装饰（可设置 border、阴影、渐变等）  
+- SizedBox 尺寸盒子（设置间距）
+- Border.all 设置边框  
+- ListView 列表
 - Text 文本
 - TextStyle 文本样式
 - Checkbox 单选框
-
+- Image.network 网络图片
 
 ### 常用的一些类
 
@@ -61,7 +67,9 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
 
 - Colors 颜色
 - MainAxisAlignment 主轴控制 类似 flex
+- CrossAxisAlignment.end 交叉轴控制  
 - setState 状态同步
+- EdgeInsets.only 内边距设置 类似于 padding
 
 
 

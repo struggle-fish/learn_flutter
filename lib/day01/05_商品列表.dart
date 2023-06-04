@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(
-    MyApp()
-);
+// void main() => runApp(
+//     MyApp()
+// );
 
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class ListImageDemo extends StatelessWidget {
+  const ListImageDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +38,9 @@ class HomeContent extends StatelessWidget {
     return ListView(
       children: [
         HomeProductItem('苹果1', '苹果手机1', 'https://m1.autoimg.cn/clubdfs/g25/M03/47/99/702x1054_0_autohomecar__ChxkqWInDCKAQN8EABtErDj2elg108.jpg.webp'),
+        SizedBox(height: 10,),
         HomeProductItem('苹果2', '苹果手机2', 'https://m1.autoimg.cn/clubdfs/g25/M08/47/99/702x1054_0_autohomecar__ChxkqWInDCaADSlbABoW0d80OOs535.jpg.webp'),
+        SizedBox(height: 10,),
         HomeProductItem('苹果3', '苹果手机3', 'https://m1.autoimg.cn/clubdfs/g30/M06/D4/5E/702x1054_0_autohomecar__ChwFlGInDCKAIZ7zABci7bSuMBI115.jpg.webp')
       ],
     );
@@ -52,6 +54,7 @@ class HomeProductItem extends StatelessWidget {
   final String imageURL;
 
 
+  // 构造函数
   const HomeProductItem(this.title, this.desc, this.imageURL);
 
   @override
@@ -69,7 +72,7 @@ class HomeProductItem extends StatelessWidget {
           )
       ),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.end, // 设置交叉轴
+        crossAxisAlignment: CrossAxisAlignment.start , // 设置交叉轴
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
