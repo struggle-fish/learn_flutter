@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(
-    MyApp()
-);
+// void main() => runApp(
+//     MyApp()
+// );
 
-class MyApp extends StatelessWidget {
+class CheckBoxDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -43,6 +43,7 @@ class ZYHomePage extends StatelessWidget {
 //   );
 // }
 
+
 class ZYContentBody extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -51,9 +52,11 @@ class ZYContentBody extends StatefulWidget {
 }
 
 
-// widget 不能定义状态
-// StatefulWidget 不能定义状态-> 创建一个单独的类，这个类扶着维护状态
+// TODO: widget 不能定义状态
+// StatefulWidget 不能定义状态-> 创建一个单独的类，这个类负责维护状态
+// 在 Flutter 开发中所有的 Widget 都不能定义状态
 class ZYContentBodyState extends State<ZYContentBody> {
+
 
   var flag = true;
 
@@ -63,12 +66,17 @@ class ZYContentBodyState extends State<ZYContentBody> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Checkbox(value: flag, onChanged: (value) {
-            setState(() {
-              flag = value!;
-            });
-          }),
-          Text('同意协议', style: TextStyle(
+          Checkbox(
+              value: flag,
+              onChanged: (value) {
+                setState(() {
+                  flag = value!;
+                });
+              }
+          ),
+          Text(
+              '同意协议',
+              style: TextStyle(
               fontSize: 20
           )),
         ],

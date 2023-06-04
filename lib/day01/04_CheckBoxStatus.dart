@@ -63,12 +63,17 @@ class ZYContentBodyState extends State<ZYContentBody> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Checkbox(value: flag, onChanged: (value) {
-            setState(() {
-              flag = value!;
-            });
-          }),
-          Text('同意协议1', style: TextStyle(
+          Checkbox(
+              value: flag,
+              onChanged: (value) {
+                setState(() {
+                  flag = value!;
+                });
+              },
+          ),
+          Text(
+              '同意协议1',
+              style: TextStyle(
               fontSize: 20
           )),
         ],

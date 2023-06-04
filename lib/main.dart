@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:learn_flutter/day01/02_helloworld.dart';
-
+import 'package:learn_flutter/day01/03_CheckBox.dart';
 // ---------------------------------------------------------------------------
 
 
@@ -20,7 +20,8 @@ import 'package:learn_flutter/demo/20_StateManagement.dart';
 
 main() {
   runApp(
-      MyApp()
+      // MyApp()
+      CheckBoxDemo()
   );
 }
 

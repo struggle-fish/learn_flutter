@@ -16,12 +16,12 @@
 
 ### Widget
 - 有状态的 Widget : StatefulWidget 在运行过程中有一些状态（data）需要改变
-- 无状态的 Widget : StatelessWidget 内容是确定的没有状态
+- 无状态的 Widget : StatelessWidget 内容是确定的，没有状态
     - 直接写死
     - parent widget 传递
     - inheritWidget 获取
 
-Flutter 中万物皆是 Widget , 在 Flutter 开发中所有的 Widget 都不能定义状态
+Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不能定义状态**
 
 
 ### 生命周期
@@ -49,8 +49,10 @@ Flutter 中万物皆是 Widget , 在 Flutter 开发中所有的 Widget 都不能
 - Scaffold 脚手架 快速搭建页面
 - AppBar 顶部导航
 - Center 居中
+- Row 一行
 - Text 文本
 - TextStyle 文本样式
+- Checkbox 单选框
 
 
 ### 常用的一些类
@@ -58,6 +60,8 @@ Flutter 中万物皆是 Widget , 在 Flutter 开发中所有的 Widget 都不能
 以下的都是些常用的方法类
 
 - Colors 颜色
+- MainAxisAlignment 主轴控制 类似 flex
+- setState 状态同步
 
 
 
