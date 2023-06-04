@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(
-    MyApp()
-);
+// void main() => runApp(
+//     MyApp()
+// );
 
 
 class MyApp extends StatelessWidget {
@@ -23,7 +23,7 @@ class ZYHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('商品列表'),
+        title: Text('StatefulWidget'),
       ),
       body: HomeContent('homecontent'),
     );
@@ -32,6 +32,8 @@ class ZYHomePage extends StatelessWidget {
 
 class HomeContent extends StatefulWidget {
   final message;
+
+  // 构造函数
   const HomeContent(this.message, {Key? key}) : super(key: key);
 
   @override
@@ -44,9 +46,11 @@ class HomeContent extends StatefulWidget {
 * 2、在 Flutter 在运行过程中  Widget 是不断的销毁创建的，当自己的状态发生改变时，并不希望重新创建一个新的State
 *
 * */
+// TODO: _ 表示内部可访问 状态一般都用下划线
 class _HomeContentState extends State<HomeContent> {
   var _counter = 0;
 
+  // TODO: widget.message 获取父类的属性
 
   @override
   Widget build(BuildContext context) {
@@ -75,14 +79,26 @@ class _HomeContentState extends State<HomeContent> {
             style: ButtonStyle(
               backgroundColor: MaterialStateProperty.all(Colors.red),
             ) ,
-            child: Text('+按钮')),
+            child: Row(
+              children: [
+                Icon(Icons.add),
+                Text('按钮')
+              ],
+            )
+        ),
         ElevatedButton(
             onPressed: (){
               setState(() {
                 _counter--;
               });
             },
-            child: Text('-按钮'))
+            child: Row(
+              children: [
+                Icon(Icons.delete),
+                Text('按钮')
+              ],
+            )
+        )
       ],
     );
   }
