@@ -17,6 +17,9 @@
 ### Widget
 - 有状态的 Widget : StatefulWidget 在运行过程中有一些状态（data）需要改变
 - 无状态的 Widget : StatelessWidget 内容是确定的没有状态
+    - 直接写死
+    - parent widget 传递
+    - inheritWidget 获取
 
 Flutter 中万物皆是 Widget , 在 Flutter 开发中所有的 Widget 都不能定义状态
 
@@ -38,7 +41,7 @@ Flutter 中万物皆是 Widget , 在 Flutter 开发中所有的 Widget 都不能
 - `option + command + w` 将build 出来的widget 抽取到文件（快捷键不好使，所以鼠标右击吧）
 
 
-### 一些常用 Widget 
+### 一些常用 UI Widget 
 
 注意以下的都是 Widget , 调用的时候都是 XXX() 去调用的
 

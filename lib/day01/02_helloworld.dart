@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(
-    MyApp()
-);
+// void main() => runApp(
+//     MyApp()
+// );
+
+// TODO: 注意分层
+
 
 class MyApp extends StatelessWidget {
   @override
