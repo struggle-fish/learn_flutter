@@ -57,7 +57,6 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
 
 - MaterialApp 谷歌提示的设计风格 各种UI组件
   - ElevatedButton "漂浮"按钮 有圆角 默认带有阴影和灰色背景
-  - Icon 图标
   - Scaffold 脚手架 快速搭建页面
   - AppBar 顶部导航
   
@@ -76,6 +75,7 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
 - TextStyle 文本样式
 - TextButton 文本按钮
 - ButtonStyle 按钮样式
+- ButtonTheme 可以自定义按钮  
 - ElevatedButton 圆角按钮
 - OutlinedButton 边框按钮
 - FloatingActionButton  悬浮按钮
@@ -83,6 +83,14 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
 - WidgetSpan 空 span 吧，可以包裹图标
 - Checkbox 单选框
 - Image.network 网络图片
+- NetworkImage 加载网络图片
+- AssetImage 加载本地图片  Image.asset
+- FadeInImage 占位图
+- Icon 字体图标
+
+
+
+
 
 ### 常用的一些类
 
@@ -98,14 +106,20 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
 - TextAlign 文本属性设置 如 TextAlign.center
 - TextOverflow.ellipsis 超出省略 ...
 - BorderRadius 圆角 如 BorderRadius.circular(4)
-
-
-
+- BoxFit 设置填充方式 如 BoxFit.contain
+- Alignment 对齐方式 如 Alignment.bottomCenter
+- ImageRepeat 图片重复 如 ImageRepeat.repeatY
+- MaterialStateProperty   Material Design设计规范里值的设定  如  MaterialStateProperty.all(Colors.white)
+- Duration 设置延时时间 Duration(seconds: 3)
 
 
 ### 使用本地图片
 - 在Flutter 项目里窗机一个文件夹，存储图片
-- 在 pubspec.yaml 进行配置
+- 在 pubspec.yaml 进行配置 
+  ```
+    assets:
+      - assets/images/
+   ```
 - 使用图片
 - 图片会默认缓存的 [默认缓存1000张 100MB](https://api.flutter.dev/flutter/painting/ImageCache-class.html) 
 - [参考](https://blog.csdn.net/u011578734/article/details/111935285)
