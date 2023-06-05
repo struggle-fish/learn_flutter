@@ -9,7 +9,8 @@ import 'package:flutter/material.dart';
 // import 'package:learn_flutter/day02/03_文本widget.dart';
 // import 'package:learn_flutter/day02/04_ButtonDemo.dart';
 // import 'package:learn_flutter/day02/05_ImageDemo.dart';
-import 'package:learn_flutter/day02/06_TextFileDemo.dart';
+// import 'package:learn_flutter/day02/06_TextFileDemo.dart';
+import 'package:learn_flutter/day02/07_LayoutDemo1.dart';
 // ---------------------------------------------------------------------------
 
 import 'package:learn_flutter/demo/02_ListViewDemo.dart';
@@ -35,7 +36,8 @@ main() {
       // TextWidgetDemo()
       // BasicButtonDemo()
       // ImageBasicDemo()
-      TextFileBasicDemo()
+      // TextFileBasicDemo()
+      LayoutBasicDemo()
   );
 }
 

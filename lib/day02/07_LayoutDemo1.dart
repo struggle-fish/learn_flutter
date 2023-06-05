@@ -1,4 +1,29 @@
 import 'package:flutter/material.dart';
+
+class LayoutBasicDemo extends StatelessWidget {
+  const LayoutBasicDemo({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('输入框'),
+        ),
+        body: ListView(
+          children: [
+            AlignDemo(),
+            PaddingDemo(),
+            ContainerDemo()
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+
+
 class ContainerDemo extends StatelessWidget {
   const ContainerDemo({
     Key? key,
@@ -11,12 +36,12 @@ class ContainerDemo extends StatelessWidget {
       width: 200,
       height: 200,
       alignment: Alignment.center,
-      margin: EdgeInsets.all(10), // 外边距
+      margin: EdgeInsets.all(20), // 外边距
       decoration: BoxDecoration(
           color: Colors.red,
           border: Border.all(
-              width: 0.5,
-              color: Colors.green
+              width: 10,
+              color: Colors.blue
           ),
           borderRadius: BorderRadius.circular(20), // 设置圆角
           boxShadow: [
@@ -51,6 +76,7 @@ class PaddingDemo extends StatelessWidget {
       children: [
         Padding(
           padding: EdgeInsets.symmetric(vertical: 20, horizontal: 50),
+          // padding: EdgeInsets.all(10),
           child: Text(
             '你好全世界',
             style: TextStyle(

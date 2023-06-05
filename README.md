@@ -61,14 +61,17 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
   - AppBar 顶部导航
   
 
-- Container 包裹 
-- Center 居中
+- Container 包裹 有点儿 div 的感觉  宽高、内边距、形变、阴影。。。
+- BoxDecoration 盒子装饰（可设置颜色、圆角、 border、阴影、渐变等）
+
 - Row 一行
 - Column 垂直排列
-- BoxDecoration 盒子装饰（可设置 border、阴影、渐变等）  
 - SizedBox 尺寸盒子（模拟间距）
 - Border.all 设置边框  
 - Padding 内边距
+- Align 对齐方式 默认居中  把widget放哪儿  有点儿 position 的感觉
+- Center 居中
+
 - ListView 列表
 - Text 文本 内部是调用的 RichText
 - Text.rich  丰富的文本 可以加图 加文字等等  图文混排
@@ -99,24 +102,27 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
 
 以下的都是些常用的方法类
 
+- Alignment 对齐方式值 如 Alignment.bottomCenter 、Alignment(1, 1)
 - Colors 颜色 如 Colors.red
 - MainAxisAlignment 主轴控制 类似 flex
 - MainAxisSize 设置主轴占多大 默认是整行  MainAxisSize.min 
 - CrossAxisAlignment 交叉轴控制 如 end start等  
 - setState 状态同步
-- EdgeInsets.only 内边距设置 类似于 padding
+- EdgeInsets.only 内边距值设置 类似于 padding 如 EdgeInsets.all(10)
 - Icons 提供各种 icon 图标 如 Icons.add
 - TextAlign 文本属性设置 如 TextAlign.center
 - TextOverflow.ellipsis 超出省略 ...
 - BorderRadius 圆角 如 BorderRadius.circular(4)
 - BoxFit 设置填充方式 如 BoxFit.contain
-- Alignment 对齐方式 如 Alignment.bottomCenter
+- Border 边框值设置  如 Border.all()
+- BoxShadow 设置盒子的阴影相关  颜色，偏移量 模糊度等  
+- InputBorder 表单 border 如 InputBorder.none  
 - ImageRepeat 图片重复 如 ImageRepeat.repeatY
 - MaterialStateProperty   Material Design设计规范里值的设定  如  MaterialStateProperty.all(Colors.white)
 - Duration 设置延时时间 Duration(seconds: 3)
-- InputBorder 表单 border 如 InputBorder.none
 - OutlineInputBorder 设置 input 边框
 - TextEditingController  文本输入框 的控制器
+- Matrix4 形变值设置  如 Matrix4.skew(0.1, 0)
 
 ### 使用本地图片
 - 在Flutter 项目里窗机一个文件夹，存储图片
