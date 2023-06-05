@@ -77,7 +77,11 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
 - Align 对齐方式 默认居中  把widget放哪儿  有点儿 position 的感觉
 - Center 居中
 
-- ListView 列表
+- ListView 列表 一次创建完
+  - ListView.builder 可视区内的创建 推荐用这个
+  - ListView.separated 带分割线的 list
+- ListTile 列表项 item 可以设置标题、描述等
+  
 - Text 文本 内部是调用的 RichText
 - Text.rich  丰富的文本 可以加图 加文字等等  图文混排
 - TextSpan 文本片段
@@ -98,7 +102,7 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
 - AssetImage 加载本地图片  Image.asset
 - FadeInImage 占位图
 - Icon 字体图标
-
+- Divider 分隔线
 
 
 
@@ -129,7 +133,7 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
 - TextEditingController  文本输入框 的控制器
 - Matrix4 形变值设置  如 Matrix4.skew(0.1, 0) 跟动画相关
 - Axis 设置 flex 方向 Axis.vertical(约等于Column)、Axis.horizontal(约等于Row)
-
+- List.generate 循环生成widget列表
 
 
 ### 使用本地图片

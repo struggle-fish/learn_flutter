@@ -1,5 +1,23 @@
 import 'package:flutter/material.dart';
 
+
+class ListBasicDemo extends StatelessWidget {
+  const ListBasicDemo({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('列表'),
+        ),
+        body: ListViewSeparatedDemo(),
+      ),
+    );
+  }
+}
+
+
 class ListViewSeparatedDemo extends StatelessWidget {
   const ListViewSeparatedDemo({
     Key? key,
@@ -48,8 +66,9 @@ class ListViewDemo1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      // scrollDirection: Axis.horizontal,
+      // scrollDirection: Axis.horizontal, // 水平滚动
       // itemExtent: 300,
+      padding: EdgeInsets.all(20),
       children: List.generate(100, (index) {
         return ListTile(
           leading: Icon(Icons.people),
