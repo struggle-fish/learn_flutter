@@ -66,13 +66,16 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
 - Row 一行
 - Column 垂直排列
 - BoxDecoration 盒子装饰（可设置 border、阴影、渐变等）  
-- SizedBox 尺寸盒子（设置间距）
+- SizedBox 尺寸盒子（模拟间距）
 - Border.all 设置边框  
+- Padding 内边距
 - ListView 列表
 - Text 文本 内部是调用的 RichText
 - Text.rich  丰富的文本 可以加图 加文字等等  图文混排
 - TextSpan 文本片段
 - TextStyle 文本样式
+- TextField 表单
+- InputDecoration  输入框 input
 - TextButton 文本按钮
 - ButtonStyle 按钮样式
 - ButtonTheme 可以自定义按钮  
@@ -111,7 +114,9 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
 - ImageRepeat 图片重复 如 ImageRepeat.repeatY
 - MaterialStateProperty   Material Design设计规范里值的设定  如  MaterialStateProperty.all(Colors.white)
 - Duration 设置延时时间 Duration(seconds: 3)
-
+- InputBorder 表单 border 如 InputBorder.none
+- OutlineInputBorder 设置 input 边框
+- TextEditingController  文本输入框 的控制器
 
 ### 使用本地图片
 - 在Flutter 项目里窗机一个文件夹，存储图片

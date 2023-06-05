@@ -1,10 +1,39 @@
 import 'package:flutter/material.dart';
 
-class TextFiledDemo extends StatelessWidget {
+
+class TextFileBasicDemo extends StatelessWidget {
+  const TextFileBasicDemo({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('输入框'),
+        ),
+        body: TextFiledDemo(),
+      ),
+    );
+  }
+}
+
+class TextFiledDemo extends StatefulWidget {
+  const TextFiledDemo({Key? key}) : super(key: key);
+
+  @override
+  State<TextFiledDemo> createState() => _TextFiledDemoState();
+}
+
+class _TextFiledDemoState extends State<TextFiledDemo> {
 
   final usernameTextEditController = TextEditingController();
   final passwordTextEditController = TextEditingController();
 
+
+  var username;
+  var password;
+  
+  
   @override
   Widget build(BuildContext context) {
     return Theme(
@@ -26,6 +55,10 @@ class TextFiledDemo extends StatelessWidget {
                   fillColor: Colors.red[100]
               ),
               onChanged: (value) {
+                setState(() {
+                  username = value;
+                });
+
                 print(value);
               },
               onSubmitted: (value) {
@@ -41,11 +74,14 @@ class TextFiledDemo extends StatelessWidget {
                   labelText: 'password',
                   icon: Icon(Icons.lock),
                   hintText: '请输入密码',
-                  border: InputBorder.none,
+                  border: OutlineInputBorder(),
                   filled: true,
                   fillColor: Colors.red[100]
               ),
               onChanged: (value) {
+                setState(() {
+                  password = value;
+                });
                 print(value);
               },
               onSubmitted: (value) {
@@ -53,20 +89,24 @@ class TextFiledDemo extends StatelessWidget {
               },
             ),
             Container(
-              width: 100,
               child: ElevatedButton(
                   onPressed: () {
+
                     // 获取用户名和密码
-                    final username = usernameTextEditController.text;
-                    final password = passwordTextEditController.text;
-                    print('用户名:${username}, 密码:${password}');
+                    final usernameText = usernameTextEditController.text;
+                    final passwordText = passwordTextEditController.text;
+
+                    print('用户名:${usernameText}, 密码:${passwordText}');
                   },
                   child: Text('登录')
               ),
-            )
+            ),
+            Text('输入的用户名是${ username}, 密码是${password}')
           ],
         ),
       ),
     );
   }
 }
+
+
