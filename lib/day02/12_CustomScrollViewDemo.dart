@@ -1,5 +1,24 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
+
+
+class CustomScrollBasicDemo extends StatelessWidget {
+  const CustomScrollBasicDemo({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('列表'),
+        ),
+        body: CustomScrollViewDemo1(),
+      ),
+    );
+  }
+}
+
+
 class CustomScrollViewDemo2 extends StatelessWidget {
   const CustomScrollViewDemo2({
     Key? key,

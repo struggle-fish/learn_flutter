@@ -2,6 +2,23 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+
+class GridBasicDemo extends StatelessWidget {
+  const GridBasicDemo({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('列表'),
+        ),
+        body: GirdDemo3(),
+      ),
+    );
+  }
+}
+
 class GirdDemo3 extends StatelessWidget {
   const GirdDemo3({
     Key? key,
