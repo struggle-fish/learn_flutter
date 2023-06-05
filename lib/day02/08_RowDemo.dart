@@ -1,5 +1,62 @@
 import 'package:flutter/material.dart';
 
+
+
+class RowBasicDemo extends StatelessWidget {
+  const RowBasicDemo({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('弹性布局'),
+        ),
+        body: ListView(
+          children: [
+            FlexDemo(),
+            RowDemo(),
+            RowDemo2(),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class FlexDemo extends StatelessWidget {
+  const FlexDemo({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Flex(
+        direction: Axis.horizontal,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          Container(
+            width: 80,
+            height: 80,
+            color: Colors.red,
+            child: Text('模块1', style: TextStyle(fontSize: 30),),
+          ),
+          Container(
+            width: 80,
+            height: 80,
+            color: Colors.red,
+            child: Text('模块2', style: TextStyle(fontSize: 30),),
+          ),
+          Container(
+            width: 80,
+            height: 80,
+            color: Colors.red,
+            child: Text('模块3', style: TextStyle(fontSize: 30),),
+          )
+        ],
+    );
+  }
+}
+
+
 class RowDemo extends StatelessWidget {
   const RowDemo({
     Key? key,
@@ -13,7 +70,7 @@ class RowDemo extends StatelessWidget {
       // mainAxisSize: MainAxisSize.min,
       children: [
         Flexible(
-          // 空间分配
+          // 空间分配z
           fit: FlexFit.tight,
           flex: 1,
           child: Container(
@@ -70,7 +127,7 @@ class RowDemo2 extends StatelessWidget {
           child: Text(
             '你好全世界',
             style: TextStyle(
-                fontSize: 15
+                fontSize: 30
             ),
           ),
         ),
@@ -81,7 +138,7 @@ class RowDemo2 extends StatelessWidget {
           child: Text(
             '你好全世界',
             style: TextStyle(
-                fontSize: 10
+                fontSize: 30
             ),
           ),
         ),
@@ -92,7 +149,7 @@ class RowDemo2 extends StatelessWidget {
           child: Text(
             '你好全世界',
             style: TextStyle(
-                fontSize: 10
+                fontSize: 30
             ),
           ),
         ),
@@ -103,7 +160,7 @@ class RowDemo2 extends StatelessWidget {
           child: Text(
             '你好全世界',
             style: TextStyle(
-                fontSize: 5
+                fontSize: 20
             ),
           ),
         )

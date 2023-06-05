@@ -61,12 +61,15 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
   - AppBar 顶部导航
   
 
-- Container 包裹 有点儿 div 的感觉  宽高、内边距、形变、阴影。。。
+- Container 包裹 有点儿 div 的感觉  宽高、内边距、形变、阴影、背景。。。
 - BoxDecoration 盒子装饰（可设置颜色、圆角、 border、阴影、渐变等）
 
-- Row 一行
+- Row 一行排列 
 - Column 垂直排列
 - SizedBox 尺寸盒子（模拟间距）
+- Flex 弹性布局   Row 、Column 都是基于 Flex实现的
+  - Flexible  Flex 的孩子 可以设置 flex 值 
+  - Expanded  Flex 的孩子 继承自 Flexible 
 - Border.all 设置边框  
 - Padding 内边距
 - Align 对齐方式 默认居中  把widget放哪儿  有点儿 position 的感觉
@@ -104,10 +107,10 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
 
 - Alignment 对齐方式值 如 Alignment.bottomCenter 、Alignment(1, 1)
 - Colors 颜色 如 Colors.red
-- MainAxisAlignment 主轴控制 类似 flex
+- MainAxisAlignment 主轴控制 类似 flex 如 MainAxisAlignment.spaceAround
 - MainAxisSize 设置主轴占多大 默认是整行  MainAxisSize.min 
-- CrossAxisAlignment 交叉轴控制 如 end start等  
-- setState 状态同步
+- CrossAxisAlignment 交叉轴控制 如 end start等
+- setState 状态同步 注意 只在 StatefulWidget内使用
 - EdgeInsets.only 内边距值设置 类似于 padding 如 EdgeInsets.all(10)
 - Icons 提供各种 icon 图标 如 Icons.add
 - TextAlign 文本属性设置 如 TextAlign.center
@@ -122,7 +125,10 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
 - Duration 设置延时时间 Duration(seconds: 3)
 - OutlineInputBorder 设置 input 边框
 - TextEditingController  文本输入框 的控制器
-- Matrix4 形变值设置  如 Matrix4.skew(0.1, 0)
+- Matrix4 形变值设置  如 Matrix4.skew(0.1, 0) 跟动画相关
+- Axis 设置 flex 方向 Axis.vertical(约等于Column)、Axis.horizontal(约等于Row)
+
+
 
 ### 使用本地图片
 - 在Flutter 项目里窗机一个文件夹，存储图片
