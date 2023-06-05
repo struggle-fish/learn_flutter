@@ -1,6 +1,28 @@
 
 import 'package:flutter/material.dart';
 
+
+class StackBasicDemo extends StatelessWidget {
+  const StackBasicDemo({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Stack'),
+        ),
+        body: ListView(
+          children: [
+            StackDemo(),
+            StackDemo2()
+          ],
+        ),
+      ),
+    );
+  }
+}
+
 class StackDemo2 extends StatefulWidget {
   const StackDemo2({
     Key? key,
@@ -56,6 +78,13 @@ class StackDemo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    /*
+      Stack 默认的大小是 包裹内容的
+        - alignment 从什么位置开始排布所有的子widget
+        - fit： expand（很少）将子元素拉伸到尽可能大
+        - overflow: 超出部分如何处理
+
+    * */
     return Stack(
       alignment: AlignmentDirectional.topCenter, // 哪个位置开始排布
       children: [
@@ -68,7 +97,12 @@ class StackDemo extends StatelessWidget {
         Positioned(
             right: 0,
             bottom: 0,
-            child: Text('你好全世界', style: TextStyle(backgroundColor: Colors.green),)
+            child: Text(
+              '你好全世界',
+              style: TextStyle(
+                  backgroundColor: Colors.green
+              ),
+            )
         )
       ],
     );

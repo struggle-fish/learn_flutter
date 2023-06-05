@@ -71,12 +71,13 @@ class RowDemo extends StatelessWidget {
       children: [
         Flexible(
           // 空间分配z
-          fit: FlexFit.tight,
+          fit: FlexFit.loose,
           flex: 1,
           child: Container(
             width: 80,
             height: 80,
             color: Colors.red,
+            child: Text('哈哈哈'),
           ),
         ),
         Flexible(
@@ -89,6 +90,7 @@ class RowDemo extends StatelessWidget {
           ),
         ),
         Expanded(
+          flex: 2,
           child: Container(
             width: 1,
             height: 60,

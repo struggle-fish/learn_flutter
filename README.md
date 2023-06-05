@@ -68,8 +68,10 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
 - Column 垂直排列
 - SizedBox 尺寸盒子（模拟间距）
 - Flex 弹性布局   Row 、Column 都是基于 Flex实现的
-  - Flexible  Flex 的孩子 可以设置 flex 值 
-  - Expanded  Flex 的孩子 继承自 Flexible 
+  - Flexible  Flex 的孩子 可以设置 flex 值 空间分配
+  - Expanded  Flex 的孩子 继承自 Flexible
+- Stack 层叠布局  默认的大小是包裹内容的大小
+- Positioned 绝对定位  类比 position
 - Border.all 设置边框  
 - Padding 内边距
 - Align 对齐方式 默认居中  把widget放哪儿  有点儿 position 的感觉
