@@ -12,7 +12,7 @@ class CustomScrollBasicDemo extends StatelessWidget {
         appBar: AppBar(
           title: Text('列表'),
         ),
-        body: CustomScrollViewDemo1(),
+        body: CustomScrollViewDemo2(),
       ),
     );
   }
@@ -30,10 +30,13 @@ class CustomScrollViewDemo2 extends StatelessWidget {
       slivers: [
         SliverAppBar(
           expandedHeight: 200,
-          pinned: true,
+          pinned: true, // 是否吸顶
           flexibleSpace: FlexibleSpaceBar(
-            title: Text('你好全世界'),
-            background: Image.asset('assets/images/autohomedealer__ChwFRl_7xauAaYWPAAFcSUswvQ0960.jpeg'),
+            title: Text('你好全世界1'),
+            background: Image.asset(
+                'assets/images/autohomedealer__ChwFRl_7xauAaYWPAAFcSUswvQ0960.jpeg',
+              fit: BoxFit.cover,
+            ),
           ),
         ),
         SliverGrid(
@@ -78,7 +81,7 @@ class CustomScrollViewDemo1 extends StatelessWidget {
       slivers: [
         SliverSafeArea(
           sliver: SliverPadding(
-            padding: EdgeInsets.all(8),
+            padding: EdgeInsets.all(10),
             sliver: SliverGrid(
               delegate: SliverChildBuilderDelegate(
                     (BuildContext ctx , int index) {
@@ -91,7 +94,8 @@ class CustomScrollViewDemo1 extends StatelessWidget {
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   crossAxisSpacing: 8,
-                  mainAxisSpacing: 8
+                  mainAxisSpacing: 8,
+                  childAspectRatio: 1.5
               ),
             ),
           ),

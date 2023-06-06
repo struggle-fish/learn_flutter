@@ -14,7 +14,8 @@ import 'package:flutter/material.dart';
 // import 'package:learn_flutter/day02/08_RowDemo.dart';
 // import 'package:learn_flutter/day02/09_StackDemo.dart';
 // import 'package:learn_flutter/day02/10_ListViewDemo.dart';
-import 'package:learn_flutter/day02/11_GridViewDemo.dart';
+// import 'package:learn_flutter/day02/11_GridViewDemo.dart';
+import 'package:learn_flutter/day02/12_CustomScrollViewDemo.dart';
 // ---------------------------------------------------------------------------
 
 import 'package:learn_flutter/demo/02_ListViewDemo.dart';
@@ -45,7 +46,8 @@ main() {
       // RowBasicDemo()
       // StackBasicDemo()
       // ListBasicDemo()
-      GridBasicDemo()
+      // GridBasicDemo()
+      CustomScrollBasicDemo()
   );
 }
 

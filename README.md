@@ -80,10 +80,23 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
 - ListView 列表 一次创建完
   - ListView.builder 可视区内的创建 推荐用这个
   - ListView.separated 带分割线的 list
+  - ListView.custom 
 - ListTile 列表项 item 可以设置标题、描述等
 - GridView 网格布局
   - GridView.builder
-  
+
+
+- CustomScrollView  统一管理多个滚动视图，可以放多个滚动widget 在 CustomScrollView 中，每一个独立的，可滚动的 widget 被称为 Sliver
+- SliverList 类似 ListView  
+- SliverGrid  类似于 GridView
+  - SliverChildBuilderDelegate 函数 生成子模块
+  - SliverGridDelegateWithFixedCrossAxisCount 函数
+- SliverPadding 设置 Sliver 的内边距
+- SliverSafeArea 设置内容显示在安全区域（避开刘海遮挡）
+- SliverAppBar 添加一个 AppBar 通常用作 CustomScrollView的 HeaderView  可以滚动后吸顶
+- FlexibleSpaceBar 可以吸顶导航
+
+
 - Text 文本 内部是调用的 RichText
 - Text.rich  丰富的文本 可以加图 加文字等等  图文混排
 - TextSpan 文本片段
