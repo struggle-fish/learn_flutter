@@ -1,4 +1,22 @@
 import 'package:flutter/material.dart';
+
+
+class ScrollListionBasicDemo extends StatelessWidget {
+  const ScrollListionBasicDemo({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('滚动监听'),
+        ),
+        body: HomeContent(),
+      ),
+    );
+  }
+}
+
 class HomeContent extends StatefulWidget {
   const HomeContent({Key? key}) : super(key: key);
 
@@ -14,7 +32,11 @@ class _HomeContentState extends State<HomeContent> {
   final passwordTextEditController = TextEditingController();
 
   ScrollController _controller = ScrollController(initialScrollOffset: 300);
+
   bool _isShowFloatingButton = false;
+
+
+
   @override
   void initState() {
     // TODO: implement initState
@@ -27,6 +49,13 @@ class _HomeContentState extends State<HomeContent> {
 
     });
   }
+
+
+  /*
+    两种方式可以监听滚动
+     1、controller
+     2、NotificationListener
+  * */
 
   @override
   Widget build(BuildContext context) {

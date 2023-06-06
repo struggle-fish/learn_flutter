@@ -30,11 +30,18 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
 生命周期本质上是回调函数, 主要是讨论 StatefulWidget 的生命周期，从创建到销毁的过程。
 
 - 作用
-    - 初始化数据
+    - 初始化数据  initState
     - 发送网络请求
     - 监听组件中的事件
     - 管理内存（定时器，控制器的销毁等）
 
+
+- 钩子函数
+  - initState 初始化
+  - didUpdateWidget
+  - didChangeDependencies 状态依赖更新
+  - build  构建
+  - dispose  销毁
 
 ### 状态管理
   - 全局状态
@@ -95,7 +102,7 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
 - SliverSafeArea 设置内容显示在安全区域（避开刘海遮挡）
 - SliverAppBar 添加一个 AppBar 通常用作 CustomScrollView的 HeaderView  可以滚动后吸顶
 - FlexibleSpaceBar 可以吸顶导航
-
+- NotificationListener 滚动监听  可以监听什么时候开始，什么时候结束
 
 - Text 文本 内部是调用的 RichText
 - Text.rich  丰富的文本 可以加图 加文字等等  图文混排
@@ -152,7 +159,33 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
 - SliverGridDelegateWithFixedCrossAxisCount 一个横轴为固定数量子元素的layout算法 在 GridView 里使用
 - SliverGridDelegateWithMaxCrossAxisExtent 一个横轴子元素为固定最大长度的layout算法
 - Random 随机数 如 Random().nextInt(256)
+- ScrollController 获取滚动的一些数据  如 ScrollController(initialScrollOffset: 300)
+  -  ```
+     // 绑定监听
+      ScrollController _controller = ScrollController(initialScrollOffset: 300);
+      _controller.addListener(）
+     // 回到顶部
+      _controller.animateTo(）
+     
+     ```
+- Curves 动画方式 如 Curves.easeIn
 
+
+
+
+### 滚动监听
+
+- controller 属性  ListView 的 controller
+  - 可以设置默认的 offset
+  - 监听滚动，也可以监听滚动的位置
+  
+- NotificationListener
+  - 监听什么时候开始滚动，什么时候结束滚动
+  
+- ScrollNotification 滚动通知
+  - ScrollStartNotification
+  - ScrollUpdateNotification
+  - ScrollEndNotification
 
 
 
