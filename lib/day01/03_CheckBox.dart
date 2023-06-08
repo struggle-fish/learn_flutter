@@ -8,19 +8,19 @@ class CheckBoxDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: ZYHomePage()
+        home: CheckBoxHomePage()
     );
   }
 }
 
-class ZYHomePage extends StatelessWidget {
+class CheckBoxHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
           title: Text('第一个Flutter')
       ),
-      body: ZYContentBody(),
+      body: CheckBoxContentBody(),
     );
   }
 }
@@ -44,7 +44,7 @@ class ZYHomePage extends StatelessWidget {
 // }
 
 
-class ZYContentBody extends StatefulWidget {
+class CheckBoxContentBody extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     return ZYContentBodyState();
@@ -55,7 +55,7 @@ class ZYContentBody extends StatefulWidget {
 // TODO: widget 不能定义状态
 // StatefulWidget 不能定义状态-> 创建一个单独的类，这个类负责维护状态
 // 在 Flutter 开发中所有的 Widget 都不能定义状态
-class ZYContentBodyState extends State<ZYContentBody> {
+class ZYContentBodyState extends State<CheckBoxContentBody> {
 
 
   var flag = true;

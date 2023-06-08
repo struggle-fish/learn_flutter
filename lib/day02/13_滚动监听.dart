@@ -11,20 +11,20 @@ class ScrollListionBasicDemo extends StatelessWidget {
         appBar: AppBar(
           title: Text('滚动监听'),
         ),
-        body: HomeContent(),
+        body: HomeContentScroll(),
       ),
     );
   }
 }
 
-class HomeContent extends StatefulWidget {
-  const HomeContent({Key? key}) : super(key: key);
+class HomeContentScroll extends StatefulWidget {
+  const HomeContentScroll({Key? key}) : super(key: key);
 
   @override
-  State<HomeContent> createState() => _HomeContentState();
+  State<HomeContentScroll> createState() => _HomeContentStateScroll();
 }
 
-class _HomeContentState extends State<HomeContent> {
+class _HomeContentStateScroll extends State<HomeContentScroll> {
   final imageURL = 'https://club2.autoimg.cn/a lbum/g26/M02/4C/44/userphotos/2020/07/25/10/820_ChwFkF8bniOAU_8EAJavO73o2KM848.jpg';
 
 

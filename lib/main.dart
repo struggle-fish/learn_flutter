@@ -1,22 +1,9 @@
 import 'package:flutter/material.dart';
 
-// import 'package:learn_flutter/day01/02_helloworld.dart';
-// import 'package:learn_flutter/day01/03_CheckBox.dart';
-// import 'package:learn_flutter/day01/05_商品列表.dart';
+import 'package:learn_flutter/day01/index.dart';
 // ---------------------------------------------------------------------------
-// import 'package:learn_flutter/day02/01_StatefulWidget.dart';
-// import 'package:learn_flutter/day02/02_生命周期.dart';
-// import 'package:learn_flutter/day02/03_文本widget.dart';
-// import 'package:learn_flutter/day02/04_ButtonDemo.dart';
-// import 'package:learn_flutter/day02/05_ImageDemo.dart';
-// import 'package:learn_flutter/day02/06_TextFileDemo.dart';
-// import 'package:learn_flutter/day02/07_LayoutDemo1.dart';
-// import 'package:learn_flutter/day02/08_RowDemo.dart';
-// import 'package:learn_flutter/day02/09_StackDemo.dart';
-// import 'package:learn_flutter/day02/10_ListViewDemo.dart';
-// import 'package:learn_flutter/day02/11_GridViewDemo.dart';
-// import 'package:learn_flutter/day02/12_CustomScrollViewDemo.dart';
-import 'package:learn_flutter/day02/13_滚动监听.dart';
+import 'package:learn_flutter/day02/index.dart';
+
 // ---------------------------------------------------------------------------
 
 import 'package:learn_flutter/demo/02_ListViewDemo.dart';
@@ -34,22 +21,8 @@ import 'package:learn_flutter/demo/20_StateManagement.dart';
 
 main() {
   runApp(
-      // MyApp()
-      // CheckBoxDemo()
-      // ListImageDemo()
-      // StatefulWidgetDemo()
-      // LifeCycle()
-      // TextWidgetDemo()
-      // BasicButtonDemo()
-      // ImageBasicDemo()
-      // TextFileBasicDemo()
-      // LayoutBasicDemo()
-      // RowBasicDemo()
-      // StackBasicDemo()
-      // ListBasicDemo()
-      // GridBasicDemo()
-      // CustomScrollBasicDemo()
-      ScrollListionBasicDemo()
+    Day02()
+    // Day01()
   );
 }
 

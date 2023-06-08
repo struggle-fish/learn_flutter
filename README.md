@@ -47,9 +47,6 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
   - 全局状态
 
 
-
-
-  
 ### 常用快捷键
 
 - `stl` 快速生成 StatelessWidget
@@ -186,14 +183,10 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
   - ScrollStartNotification
   - ScrollUpdateNotification
   - ScrollEndNotification
+  
 
 
-
-
-
-
-
-
+  
 ### 使用本地图片
 - 在Flutter 项目里窗机一个文件夹，存储图片
 - 在 pubspec.yaml 进行配置 
@@ -204,6 +197,72 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
 - 使用图片
 - 图片会默认缓存的 [默认缓存1000张 100MB](https://api.flutter.dev/flutter/painting/ImageCache-class.html) 
 - [参考](https://blog.csdn.net/u011578734/article/details/111935285)
+
+
+### 网络请求
+
+- dio
+  
+Flutter中非常流行的三方库：dio；dio是一个强大的Dart Http请求库，支持Restful API、FormData、拦截器、请求取消、Cookie管理、文件上传/下载、超时、自定义适配器等...
+
+
+
+
+### 异步
+
+- Dart 是单线程的
+
+单线程 + 事件循环 比如 JS 、Dart 都是基于单线程加事件循环来完成耗时操作的处理的。
+
+阻塞和非阻塞关注的是程序在等待调用结果（消息，返回值）是的状态
+
+- 阻塞式调用
+
+调用结果返回之前，当前线程会被挂起，调用线程只有在得到调用结果之后才会继续执行。
+点了外卖，不在做任何事情，就是在傻傻等待，你的线程停止了任何其他的工作
+
+
+- 非阻塞式调用
+
+调用执行后，当前线程不会停止执行，只需要一段时间来检查一下有没有结果返回即可。
+点了外卖，继续做其他事情，工作，游戏等，你的线程没有停止执行其他事情，只需要偶尔去看下有没有人敲门，看看外卖有没有送到
+
+
+- Dart 事件循环
+
+单线程模型中主要是在维护着一个事件循环（Event Loop）。它就是将需要处理的一系列事件（点击事件、IO事件、网络事件）放在一个实践队列中。
+不断的从事件队列中取出事件，并执行其对应需要执行的代码，直到事件队列清空。
+
+- Dart 的异步操作
+
+  - `Future` (约等于Promise)
+  - `async` 、`await`
+
+
+- 多核CPU的利用
+  - Isolate
+
+  在Dart中，有一个Isolate的概念，它是什么呢？Dart是单线程的，这个线程有自己可以访问的内存空间以及需要运行的事件循环；可以将这个空间系统称之为是一个Isolate；
+  比如Flutter中就有一个Root Isolate，负责运行Flutter的代码，比如UI渲染、用户交互等等；在 Isolate 中，资源隔离做得非常好，每个 Isolate 都有自己的 Event Loop 与 Queue，
+  Isolate 之间不共享任何资源，只能依靠消息机制通信，因此也就没有资源抢占问题。但是，如果只有一个Isolate，那么意味着我们只能永远利用一个线程，这对于多核CPU来说，是一种资源的浪费。
+  如果在开发中，我们有非常多耗时的计算，完全可以自己创建Isolate，在独立的Isolate中完成想要的计算操作。
+
+
+- 如何创建Isolate呢？
+
+  ```dart
+
+    import "dart:isolate";
+    
+    main(List<String> args) {
+      Isolate.spawn(foo, "Hello Isolate");
+    }
+    
+    void foo(info) {
+      print("新的isolate：$info");
+    }
+        
+  ```
 
 
 

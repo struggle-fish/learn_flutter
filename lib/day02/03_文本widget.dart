@@ -11,13 +11,13 @@ class TextWidgetDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: ZYHomePage(),
+      home: TextWidgetHomePage(),
     );
   }
 }
 
-class ZYHomePage extends StatelessWidget {
-  const ZYHomePage({Key? key}) : super(key: key);
+class TextWidgetHomePage extends StatelessWidget {
+  const TextWidgetHomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,19 +25,19 @@ class ZYHomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('文本widget'),
       ),
-      body: HomeContent(),
+      body: TextWidgetHomeContent(),
     );
   }
 }
 
-class HomeContent extends StatefulWidget {
-  const HomeContent({Key? key}) : super(key: key);
+class TextWidgetHomeContent extends StatefulWidget {
+  const TextWidgetHomeContent({Key? key}) : super(key: key);
 
   @override
-  State<HomeContent> createState() => _HomeContentState();
+  State<TextWidgetHomeContent> createState() => _TextWidgetHomeContent();
 }
 
-class _HomeContentState extends State<HomeContent> {
+class _TextWidgetHomeContent extends State<TextWidgetHomeContent> {
   @override
   Widget build(BuildContext context) {
     return Column(

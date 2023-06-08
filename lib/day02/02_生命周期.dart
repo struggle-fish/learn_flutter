@@ -11,19 +11,19 @@ class LifeCycle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: ZYHomePage(),
+      home: LifeCycleHomePage(),
     );
   }
 }
 
-class ZYHomePage extends StatefulWidget {
-  const ZYHomePage({Key? key}) : super(key: key);
+class LifeCycleHomePage extends StatefulWidget {
+  const LifeCycleHomePage({Key? key}) : super(key: key);
 
   @override
-  State<ZYHomePage> createState() => _ZYHomePageState();
+  State<LifeCycleHomePage> createState() => _LifeCycleHomePage();
 }
 
-class _ZYHomePageState extends State<ZYHomePage> {
+class _LifeCycleHomePage extends State<LifeCycleHomePage> {
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +34,7 @@ class _ZYHomePageState extends State<ZYHomePage> {
       body: Column(
 
         children: [
-          HomeContent() // 每次都是新的时候，就会触发didUpdateWidget
+          HomeContentLifeCle() // 每次都是新的时候，就会触发didUpdateWidget
         ],
       ),
       floatingActionButton: ElevatedButton.icon(
@@ -49,22 +49,22 @@ class _ZYHomePageState extends State<ZYHomePage> {
 }
 
 
-class HomeContent extends StatefulWidget {
-  HomeContent() {
+class HomeContentLifeCle extends StatefulWidget {
+  HomeContentLifeCle() {
     print('生命周期-1---调用HomeContent的constructor');
   }
 
   @override
-  State<HomeContent> createState() {
+  State<HomeContentLifeCle> createState() {
     print('生命周期-2---调用HomeContent的createState方法');
-    return _HomeContentState();
+    return _HomeContentLifeCle();
   }
 }
 
-class _HomeContentState extends State<HomeContent> {
+class _HomeContentLifeCle extends State<HomeContentLifeCle> {
   int _counter = 0;
 
-  _HomeContentState() {
+  _HomeContentLifeCle() {
     print('生命周期-3---调用_HomeContentState的constructor');
   }
 
@@ -76,7 +76,7 @@ class _HomeContentState extends State<HomeContent> {
   }
 
   @override
-  void didUpdateWidget(covariant HomeContent oldWidget) {
+  void didUpdateWidget(covariant HomeContentLifeCle oldWidget) {
     // TODO: implement didUpdateWidget
     print('生命周期-----didUpdateWidget---用的比较少');
     super.didUpdateWidget(oldWidget);

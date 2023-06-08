@@ -11,13 +11,13 @@ class ListImageDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: ZYHomePage(),
+      home: ListImageHomePage(),
     );
   }
 }
 
-class ZYHomePage extends StatelessWidget {
-  const ZYHomePage({Key? key}) : super(key: key);
+class  ListImageHomePage extends StatelessWidget {
+  const ListImageHomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,37 +25,37 @@ class ZYHomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('商品列表'),
       ),
-      body: HomeContent(),
+      body: ListImageHomeContent(),
     );
   }
 }
 
-class HomeContent extends StatelessWidget {
-  const HomeContent({Key? key}) : super(key: key);
+class ListImageHomeContent extends StatelessWidget {
+  const ListImageHomeContent({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return ListView(
       children: [
-        HomeProductItem('苹果1', '苹果手机1', 'https://m1.autoimg.cn/clubdfs/g25/M03/47/99/702x1054_0_autohomecar__ChxkqWInDCKAQN8EABtErDj2elg108.jpg.webp'),
+        ListImageHomeProductItem('苹果1', '苹果手机1', 'https://m1.autoimg.cn/clubdfs/g25/M03/47/99/702x1054_0_autohomecar__ChxkqWInDCKAQN8EABtErDj2elg108.jpg.webp'),
         SizedBox(height: 10,),
-        HomeProductItem('苹果2', '苹果手机2', 'https://m1.autoimg.cn/clubdfs/g25/M08/47/99/702x1054_0_autohomecar__ChxkqWInDCaADSlbABoW0d80OOs535.jpg.webp'),
+        ListImageHomeProductItem('苹果2', '苹果手机2', 'https://m1.autoimg.cn/clubdfs/g25/M08/47/99/702x1054_0_autohomecar__ChxkqWInDCaADSlbABoW0d80OOs535.jpg.webp'),
         SizedBox(height: 10,),
-        HomeProductItem('苹果3', '苹果手机3', 'https://m1.autoimg.cn/clubdfs/g30/M06/D4/5E/702x1054_0_autohomecar__ChwFlGInDCKAIZ7zABci7bSuMBI115.jpg.webp')
+        ListImageHomeProductItem('苹果3', '苹果手机3', 'https://m1.autoimg.cn/clubdfs/g30/M06/D4/5E/702x1054_0_autohomecar__ChwFlGInDCKAIZ7zABci7bSuMBI115.jpg.webp')
       ],
     );
   }
 }
 
 
-class HomeProductItem extends StatelessWidget {
+class ListImageHomeProductItem extends StatelessWidget {
   final String title;
   final String desc;
   final String imageURL;
 
 
   // 构造函数
-  const HomeProductItem(this.title, this.desc, this.imageURL);
+  const ListImageHomeProductItem(this.title, this.desc, this.imageURL);
 
   @override
   Widget build(BuildContext context) {
