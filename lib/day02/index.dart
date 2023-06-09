@@ -26,6 +26,7 @@ import 'package:learn_flutter/day02/10_ListViewDemo.dart';
 import 'package:learn_flutter/day02/11_GridViewDemo.dart';
 import 'package:learn_flutter/day02/12_CustomScrollViewDemo.dart';
 import 'package:learn_flutter/day02/13_滚动监听.dart';
+import 'package:learn_flutter/day02/14_网络请求.dart';
 
 
 Day02 () {
@@ -42,5 +43,6 @@ Day02 () {
   // return GridBasicDemo();
   // return CustomScrollBasicDemo();
   // return ScrollListionBasicDemo();
-  return ScrollListionBasicDemo();
+  // return ScrollListionBasicDemo();
+  return NetWorkBasicDemo();
 }
