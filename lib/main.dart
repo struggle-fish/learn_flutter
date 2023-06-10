@@ -18,7 +18,7 @@ import 'package:learn_flutter/demo/10_FormDemo.dart';
 import 'package:learn_flutter/demo/11_ComponentViewDemo.dart';
 import 'package:learn_flutter/demo/20_StateManagement.dart';
 
-
+// TODO: 注意这个页面主要放的是Demo, 要看其他的，可以选择 main 的配置
 main() {
   runApp(
     Day02()
