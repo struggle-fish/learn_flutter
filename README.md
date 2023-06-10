@@ -73,7 +73,8 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
   - ElevatedButton "漂浮"按钮 有圆角 默认带有阴影和灰色背景
   - Scaffold 脚手架 快速搭建页面
   - AppBar 顶部导航
-  
+  - BottomNavigationBar 底部导航
+    - BottomNavigationBarItem 子模块
 
 - Container 包裹 有点儿 div 的感觉  宽高、内边距、形变、阴影、背景。。。
   - DecoratedBox 带装饰的盒子 
@@ -92,6 +93,7 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
   - Flexible  Flex 的孩子 可以设置 flex 值 空间分配
   - Expanded  Flex 的孩子 继承自 Flexible
 - Stack 层叠布局  默认的大小是包裹内容的大小
+- IndexedStack 根据索引 显示不同的页面
 - Positioned 绝对定位  类比 position
 - Border.all 设置边框  
 - Padding 内边距
