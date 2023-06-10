@@ -76,7 +76,14 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
   
 
 - Container 包裹 有点儿 div 的感觉  宽高、内边距、形变、阴影、背景。。。
-- BoxDecoration 盒子装饰（可设置颜色、圆角、 border、阴影、渐变等）
+  - DecoratedBox 带装饰的盒子 
+    ```flutter
+        DecoratedBox(
+          decoration: BoxDecoration(color: color),
+        )
+    ```
+  - BoxDecoration 盒子装饰（可设置颜色、圆角、 border、阴影、渐变等）
+
 
 - Row 一行排列 
 - Column 垂直排列
@@ -165,6 +172,7 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
 - TextEditingController  文本输入框 的控制器
 - Matrix4 形变值设置  如 Matrix4.skew(0.1, 0) 跟动画相关
 - Axis 设置 flex 方向 Axis.vertical(约等于Column)、Axis.horizontal(约等于Row)
+  
 - List.generate 循环生成widget列表
 - SliverGridDelegateWithFixedCrossAxisCount 一个横轴为固定数量子元素的layout算法 在 GridView 里使用
 - SliverGridDelegateWithMaxCrossAxisExtent 一个横轴子元素为固定最大长度的layout算法
