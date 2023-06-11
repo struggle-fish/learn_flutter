@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 // 评分星星
 class HYStarRating extends StatefulWidget {
-  final double rating; // 当前分值
+  final num rating; // 当前分值
   final double maxRating; // 满分
   final int count; // 数量
   final double size; // 大小

@@ -14,7 +14,10 @@ class DouBanApp extends StatelessWidget {
     return MaterialApp(
       title: '豆瓣',
       theme: ThemeData(
-          primarySwatch: Colors.blue, splashColor: Colors.transparent),
+          primarySwatch: Colors.green,
+          splashColor: Colors.transparent,
+          highlightColor: Colors.transparent
+      ),
       home: HYMainPage(),
     );
   }

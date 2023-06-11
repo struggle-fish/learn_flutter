@@ -19,12 +19,13 @@ class _HYMainPageState extends State<HYMainPage> {
         children: pages,
       ),
       bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: Colors.red,
-        unselectedItemColor: Colors.grey,
+        // selectedItemColor: Colors.green,
+        // unselectedItemColor: Colors.grey,
         selectedFontSize: 16,
         unselectedFontSize: 16,
         type: BottomNavigationBarType.fixed,
         items: items,
+        currentIndex: _currentIndex,
         onTap: (index) {
           setState(() {
             _currentIndex = index;

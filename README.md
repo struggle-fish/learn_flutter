@@ -80,13 +80,18 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
   - DecoratedBox 带装饰的盒子 
     ```flutter
         DecoratedBox(
-          decoration: BoxDecoration(color: color),
+          decoration: BoxDecoration(
+            color: color, 
+            border: Border(
+              bottom: BorderSide(width: 8, color: Color(0xffcccccc))
+            )
+          ),
         )
     ```
   - BoxDecoration 盒子装饰（可设置颜色、圆角、 border、阴影、渐变等）
 
 
-- Row 一行排列 
+- Row 一行排列  注意：这个超出了不会自动换行
 - Column 垂直排列
 - SizedBox 尺寸盒子（模拟间距）
 - Flex 弹性布局   Row 、Column 都是基于 Flex实现的
@@ -95,7 +100,9 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
 - Stack 层叠布局  默认的大小是包裹内容的大小
 - IndexedStack 根据索引 显示不同的页面
 - Positioned 绝对定位  类比 position
-- Border.all 设置边框  
+- Border 边框设置  
+  - Border.all 设置边框
+  - BorderSide 设置边框宽度和颜色等
 - Padding 内边距
 - Align 对齐方式 默认居中  把widget放哪儿  有点儿 position 的感觉
 - Center 居中
@@ -121,8 +128,9 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
 - NotificationListener 滚动监听  可以监听什么时候开始，什么时候结束
 
 - Text 文本 内部是调用的 RichText
-- Text.rich  丰富的文本 可以加图 加文字等等  图文混排
+- Text.rich  丰富的文本 可以加图 加文字等等  图文混排 可以支持超出后 ...
 - TextSpan 文本片段
+- WidgetSpan   
 - TextStyle 文本样式
 - TextField 表单
 - InputDecoration  输入框 input
@@ -143,6 +151,18 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
 - Divider 分隔线
 - ClipRect 裁剪
   - CustomClipper 用这个构建要裁剪的类
+- ClipRRect 可以裁剪圆角 如 一个圆角的图片  
+  
+  ```flutter
+    ClipRRect (
+      borderRadius: BorderRadius.circular(8),
+      child: Image.network(
+          movie.imageURL!,
+          height: 150,
+      ),
+    )
+  ```
+  
 - Rect.fromLTRB(0, 0, 15, size.height) 正方形
 
 
@@ -158,7 +178,7 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
 - MainAxisSize 设置主轴占多大 默认是整行  MainAxisSize.min 
 - CrossAxisAlignment 交叉轴控制 如 end start等
 - setState 状态同步 注意 只在 StatefulWidget内使用
-- EdgeInsets.only 内边距值设置 类似于 padding 如 EdgeInsets.all(10)
+- EdgeInsets.only 内边距值设置 类似于 padding 如 EdgeInsets.all(10)  EdgeInsets.fromLTRB(10 left, 5 top, 10 right, 5 bottom)
 - Icons 提供各种 icon 图标 如 Icons.add
 - TextAlign 文本属性设置 如 TextAlign.center
 - TextOverflow.ellipsis 超出省略 ...
@@ -191,6 +211,18 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
 - Curves 动画方式 如 Curves.easeIn
 
 
+
+### Dart 中常用的方法
+
+- cast 方法是一个静态方法，它可以将对象转换为指定类型。该方法的语法如下：
+
+  ```dart
+  
+    // 语法: T cast<T>(Object value)
+     
+    Object a = "hello world";
+    String b = cast<String>(a);
+  ```
 
 
 ### 滚动监听
@@ -227,6 +259,13 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
 - dio
   
 Flutter中非常流行的三方库：dio；dio是一个强大的Dart Http请求库，支持Restful API、FormData、拦截器、请求取消、Cookie管理、文件上传/下载、超时、自定义适配器等...
+
+
+### 如果将 json 转成 model
+ 
+- 有个疑问哈，比如没有接口，自己mock 数据，怎么做呢
+
+
 
 
 
