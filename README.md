@@ -76,7 +76,7 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
   - BottomNavigationBar 底部导航
     - BottomNavigationBarItem 子模块
 
-- Container 包裹 有点儿 div 的感觉  宽高、内边距、形变、阴影、背景。。。
+- Container 包裹 有点儿 div 的感觉  宽高、圆角、内边距、形变、阴影、背景图、控制居中。。。
   - DecoratedBox 带装饰的盒子 
     ```flutter
         DecoratedBox(
@@ -107,6 +107,8 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
 - Padding 内边距
 - Align 对齐方式 默认居中  把widget放哪儿  有点儿 position 的感觉
 - Center 居中
+- Card 卡片 颜色 形状 阴影 margin等
+- AlertDialog 弹窗  
 
 - ListView 列表 一次创建完
   - ListView.builder 可视区内的创建 推荐用这个
@@ -136,6 +138,8 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
 - TextField 表单
 - InputDecoration  输入框 input
 - TextButton 文本按钮
+- CloseButton 关闭按钮  icon 
+- BackButton 返回按钮 icon
 - ButtonStyle 按钮样式
 - ButtonTheme 可以自定义按钮  
 - ElevatedButton 圆角按钮
@@ -150,6 +154,7 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
 - FadeInImage 占位图
 - Icon 字体图标
 - Divider 分隔线
+- Chip  可以做椭圆的一个小部件, 还可以加icon
 - ClipRect 裁剪
   - CustomClipper 用这个构建要裁剪的类
 - ClipRRect 可以裁剪圆角 如 一个圆角的图片  
