@@ -40,7 +40,7 @@ class Student extends Person {
   Student(this._school, String name, int age, {
     this.city, // {} 内的就是可选参数
     this.country = '中国' // 默认参数
-  }) : name = '$country.$city', // 初始化列表
+  }) : name = '$name.$country.$city', // 初始化列表
         super(name, age) {
     print('构造方法体不是必须的');
   } // 初始化列表
@@ -53,8 +53,28 @@ class Student extends Person {
 
 
 
-  ///
+  /// 命名工厂  factory [类名 + . + 方法名]
+  factory Student.stu(Student stu) {
+    return Student(stu._school, stu.name, stu.age);
+  }
 
+  String get school => _school!;
+
+  set school (String value) {
+    _school = value;
+  }
+
+  // 静态方法
+  static doPrint (String str) {
+    print('doPrint$str');
+  }
+
+  @override
+  String toString() {
+    // TODO: implement toString
+    super.toString();
+    return 'name:$name, school: ${this.school}, city:$city, country: $country, ${super.toString()}';
+  }
 
 }
 
@@ -81,4 +101,23 @@ class Logger {
   }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

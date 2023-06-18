@@ -38,5 +38,11 @@ class XieChengApp extends StatelessWidget {
     Logger log1 = Logger('工厂1');
     Logger log2 = Logger('工厂1');
     print(log1 == log2);
+
+    Student stu1 = Student('北大', '小铜钱', 12, city: '海淀');
+    stu1.school = '987';
+    print('面向对象');
+    print(stu1.toString());
+
   }
 }
