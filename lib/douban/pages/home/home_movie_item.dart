@@ -124,8 +124,8 @@ class HYHomeMovieItem extends StatelessWidget {
               child: Icon(
                 Icons.play_circle_outline,
                 color: Colors.redAccent,
-                size: 24,
-              )
+                size: 40,
+              ),
           ),
           TextSpan(
             text: '${movie.title!}',

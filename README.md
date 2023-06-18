@@ -88,8 +88,9 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
           ),
         )
     ```
-  - BoxDecoration 盒子装饰（可设置颜色、圆角、 border、阴影、渐变等）
+  - BoxDecoration 盒子装饰（可设置颜色、圆角、 border、阴影、渐变、背景图等）
 
+- SizedBox 用于给子元素指定固定的宽高
 
 - Row 一行排列  注意：这个超出了不会自动换行
 - Column 垂直排列
@@ -209,7 +210,7 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
      
      ```
 - Curves 动画方式 如 Curves.easeIn
-
+- GestureDetector 给文本加点击事件
 
 
 ### Dart 中常用的方法
