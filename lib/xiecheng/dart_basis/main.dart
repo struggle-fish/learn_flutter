@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learn_flutter/xiecheng/dart_basis/2-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1.dart';
+import 'package:learn_flutter/xiecheng/dart_basis/3-%E5%87%BD%E6%95%B0.dart';
 import '1-数据类型.dart';
 
 
@@ -14,8 +15,8 @@ class XieChengApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    _oopLearn();
-
+    // _oopLearn();
+    _functionLearn();
 
     return MaterialApp(
       title: '数据类型',
@@ -28,7 +29,7 @@ class XieChengApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('数据类型'),
         ),
-        body: DataType(),
+        // body: DataType(),
       ),
     );
   }
@@ -50,5 +51,10 @@ class XieChengApp extends StatelessWidget {
     StudyFlutter studyFlutter = StudyFlutter();
     studyFlutter.study();
 
+  }
+
+  _functionLearn() {
+    TestFunction testFunction = TestFunction();
+    testFunction.start();
   }
 }
