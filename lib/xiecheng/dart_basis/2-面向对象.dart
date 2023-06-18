@@ -103,8 +103,30 @@ class Logger {
 }
 
 
+// 抽象类 不能被实力化，可以有自己的方法
+abstract class Study {
+  void study(); // 抽象方法
+}
 
+class StudyFlutter extends Study {
+  @override
+  void study() {
+    // TODO: implement study
+    print('继承抽象类就得实现抽象类的方法');
+  }
 
+}
+
+// 混入
+class Test extends Person with Study {
+  Test(String name, int age) : super(name, age);
+
+  @override
+  void study() {
+    // TODO: implement study
+  }
+
+}
 
 
 

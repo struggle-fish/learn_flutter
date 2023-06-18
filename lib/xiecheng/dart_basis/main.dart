@@ -43,6 +43,12 @@ class XieChengApp extends StatelessWidget {
     stu1.school = '987';
     print('面向对象');
     print(stu1.toString());
+    
+    Student stu2 = Student('北大', '小铜钱', 132, city: '海淀', country: '美国');
+    print(stu2.toString());
+
+    StudyFlutter studyFlutter = StudyFlutter();
+    studyFlutter.study();
 
   }
 }
