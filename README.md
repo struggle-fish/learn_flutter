@@ -71,6 +71,20 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
 
 - MaterialApp 谷歌提示的设计风格 各种UI组件
   - ElevatedButton "漂浮"按钮 有圆角 默认带有阴影和灰色背景
+  - routes 定义路由  
+    - Navigator.pushNamed
+    - Navigator.push
+    
+    ```fluter
+       两种路由跳转方式
+       Navigator.pushNamed(context, routeName);
+      
+       Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => page)
+      )
+    ```
+  
   - Scaffold 脚手架 快速搭建页面
     - AppBar 顶部导航
     - BottomNavigationBar 底部导航 2个起步
@@ -156,6 +170,7 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
 - ElevatedButton 圆角按钮
 - OutlinedButton 边框按钮
 - FloatingActionButton  悬浮按钮
+- SwitchListTile switch按钮  
 - RoundedRectangleBorder 创建带圆角的矩形边框  可以自定义按钮
 - WidgetSpan 空 span 吧，可以包裹图标
 - Checkbox 单选框
