@@ -77,7 +77,7 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
       - BottomNavigationBarItem 子模块
     
 
-- Container 包裹 有点儿 div 的感觉  宽高、圆角、内边距、形变、阴影、背景图、控制居中。。。
+- Container 包裹 有点儿 div 的感觉 内容的宽度  宽高、圆角、内边距、形变、阴影、背景图、控制居中。。。
   - DecoratedBox 带装饰的盒子 
     ```flutter
         DecoratedBox(
@@ -90,22 +90,26 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
         )
     ```
   - BoxDecoration 盒子装饰（可设置颜色、圆角、 border、阴影、渐变、背景图等）
+- FractionallySizedBox 独占一行 div  
 
 - SizedBox 用于给子元素指定固定的宽高
+
 
 - Row 一行排列  注意：这个超出了不会自动换行
 - Column 垂直排列
 - SizedBox 尺寸盒子（模拟间距）
 - Flex 弹性布局   Row 、Column 都是基于 Flex实现的
   - Flexible  Flex 的孩子 可以设置 flex 值 空间分配
-  - Expanded  Flex 的孩子 继承自 Flexible
+  - Expanded  Flex 的孩子 继承自 Flexible 填充满高度
 - Stack 层叠布局  默认的大小是包裹内容的大小
 - IndexedStack 根据索引 显示不同的页面
 - Positioned 绝对定位  类比 position
+- Wrap 流式布局
+
 - Border 边框设置  
   - Border.all 设置边框
   - BorderSide 设置边框宽度和颜色等
-- Padding 内边距
+- Padding 设置内边距
 - Align 对齐方式 默认居中  把widget放哪儿  有点儿 position 的感觉
 - Center 居中
 - Card 卡片 颜色 形状 阴影 margin等
@@ -132,6 +136,8 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
 - NotificationListener 滚动监听  可以监听什么时候开始，什么时候结束
 - RefreshIndicator 下拉刷新 配合 ListView 使用
 - PageView 可以做 类似 swiper的一个滑动
+
+- PhysicalModel 添加3d效果 裁剪 
 
 - Text 文本 内部是调用的 RichText
 - Text.rich  丰富的文本 可以加图 加文字等等  图文混排 可以支持超出后 ...
@@ -160,9 +166,10 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
 - Icon 字体图标
 - Divider 分隔线
 - Chip  可以做椭圆的一个小部件, 还可以加icon
-- ClipRect 裁剪
+- ClipRect 裁剪 
   - CustomClipper 用这个构建要裁剪的类
-- ClipRRect 可以裁剪圆角 如 一个圆角的图片  
+- ClipRRect 方形裁剪  可以裁剪圆角 如 一个圆角的图片
+
   
   ```flutter
     ClipRRect (
@@ -173,6 +180,11 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
       ),
     )
   ```
+
+- ClipOval 圆形裁剪
+- CircleAvatar 圆形头像
+
+
   
 - Rect.fromLTRB(0, 0, 15, size.height) 正方形
 
