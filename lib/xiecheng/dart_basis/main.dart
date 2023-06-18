@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:learn_flutter/xiecheng/dart_basis/2-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1.dart';
 import 'package:learn_flutter/xiecheng/dart_basis/3-%E5%87%BD%E6%95%B0.dart';
+import 'package:learn_flutter/xiecheng/dart_basis/4-%E6%B3%9B%E5%9E%8B.dart';
 import '1-数据类型.dart';
 
 
@@ -16,8 +17,8 @@ class XieChengApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // _oopLearn();
-    _functionLearn();
-
+    // _functionLearn();
+    _testGeneric();
     return MaterialApp(
       title: '数据类型',
       theme: ThemeData(
@@ -56,5 +57,10 @@ class XieChengApp extends StatelessWidget {
   _functionLearn() {
     TestFunction testFunction = TestFunction();
     testFunction.start();
+  }
+
+  _testGeneric() {
+    TestGeneric testGeneric = TestGeneric();
+    testGeneric.start();
   }
 }
