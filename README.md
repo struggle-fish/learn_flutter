@@ -72,9 +72,10 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
 - MaterialApp 谷歌提示的设计风格 各种UI组件
   - ElevatedButton "漂浮"按钮 有圆角 默认带有阴影和灰色背景
   - Scaffold 脚手架 快速搭建页面
-  - AppBar 顶部导航
-  - BottomNavigationBar 底部导航
-    - BottomNavigationBarItem 子模块
+    - AppBar 顶部导航
+    - BottomNavigationBar 底部导航 2个起步
+      - BottomNavigationBarItem 子模块
+    
 
 - Container 包裹 有点儿 div 的感觉  宽高、圆角、内边距、形变、阴影、背景图、控制居中。。。
   - DecoratedBox 带装饰的盒子 
@@ -129,6 +130,8 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
 - SliverAppBar 添加一个 AppBar 通常用作 CustomScrollView的 HeaderView  可以滚动后吸顶
 - FlexibleSpaceBar 可以吸顶导航
 - NotificationListener 滚动监听  可以监听什么时候开始，什么时候结束
+- RefreshIndicator 下拉刷新 配合 ListView 使用
+- PageView 可以做 类似 swiper的一个滑动
 
 - Text 文本 内部是调用的 RichText
 - Text.rich  丰富的文本 可以加图 加文字等等  图文混排 可以支持超出后 ...
@@ -136,7 +139,9 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
 - WidgetSpan   
 - TextStyle 文本样式
 - TextField 表单
-- InputDecoration  输入框 input
+  - InputDecoration  输入框 input 装饰 内边距、label 、border、默认文案等等吧
+
+  
 - TextButton 文本按钮
 - CloseButton 关闭按钮  icon 
 - BackButton 返回按钮 icon
