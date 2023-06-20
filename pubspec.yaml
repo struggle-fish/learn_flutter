@@ -35,7 +35,9 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   flutter_aws_s3_client: ^0.6.0
-  dio: ^5.2.0+1
+  dio: ^5.2.1+1
+#  url_launcher: ^6.1.11 # 这个包有问题，安装了就没法运行项目了
+
 
 
 dev_dependencies:
