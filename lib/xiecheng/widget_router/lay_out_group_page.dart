@@ -8,6 +8,12 @@ class LayOutGroupPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('LayOutGroupPage'),
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Icon(Icons.arrow_back),
+        ),
       ),
       body: Container(
         child: Text('LayOutGroupPage'),
