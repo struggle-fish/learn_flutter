@@ -6,6 +6,7 @@ import 'package:learn_flutter/xiecheng/widget_gesture/main.dart';
 import 'package:learn_flutter/xiecheng/widget_layout/main.dart';
 import 'package:learn_flutter/xiecheng/widget_lifecycle/app_lifecycle.dart';
 import 'package:learn_flutter/xiecheng/widget_lifecycle/main.dart';
+import 'package:learn_flutter/xiecheng/widget_theme/main.dart';
 
 main() {
   runApp(DemoBasicApp());
@@ -43,6 +44,7 @@ class _WidgetLayoutAppState extends State<DemoBasicApp> {
         'lifecycle': (context) => WidgetLifeCycleApp(),
         'applifecycle': (context) => WidgetAppLifeCycleApp(),
         'layout': (context) => WidgetLayoutApp(),
+        'theme': (context) => WidgetThemeDemo()
       },
     );
   }
@@ -79,6 +81,7 @@ class _RouterNavigatorState extends State<RouterNavigator> {
           _item('生命周期', WidgetLifeCycleApp(), 'lifecycle'),
           _item('app应用生命周期', WidgetAppLifeCycleApp(), 'applifecycle'),
           _item('layoutswidget与组件', WidgetLayoutApp(), 'layout'),
+          _item('主题修改', WidgetThemeDemo(), 'theme'),
         ],
       ),
     );
