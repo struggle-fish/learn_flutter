@@ -26,6 +26,7 @@ class _WidgetLayoutAppState extends State<DemoBasicApp> {
     return MaterialApp(
       title: '路由',
       theme: ThemeData(
+          // fontFamily: 'RubikMonoOne',
           primarySwatch: Colors.green,
           splashColor: Colors.transparent,
           highlightColor: Colors.transparent
