@@ -1,5 +1,29 @@
 import 'package:flutter/material.dart';
 
+
+
+class StateFulWidgetGroupDemo extends StatelessWidget {
+  const StateFulWidgetGroupDemo({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('有状态widget'),
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Icon(Icons.ac_unit),
+        ),
+      ),
+      body: StatefulWidgetDemo(),
+    );
+  }
+}
+
+
+
 class StatefulWidgetDemo extends StatefulWidget {
   const StatefulWidgetDemo({Key? key}) : super(key: key);
 

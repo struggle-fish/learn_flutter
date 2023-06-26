@@ -1,4 +1,32 @@
 import 'package:flutter/material.dart';
+import 'package:learn_flutter/demo/01_%E5%BF%AB%E9%80%9F%E8%B5%B7%E6%AD%A5.dart';
+
+
+class StateLessWidgetGroupDemo extends StatefulWidget {
+  const StateLessWidgetGroupDemo({Key? key}) : super(key: key);
+
+  @override
+  State<StateLessWidgetGroupDemo> createState() => _StateLessWidgetGroupDemoState();
+}
+
+class _StateLessWidgetGroupDemoState extends State<StateLessWidgetGroupDemo> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('无状态widget和组件'),
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Icon(Icons.ac_unit),
+        ),
+      ),
+      body: statelessWidgetDemo(),
+    );
+  }
+}
+
 
 class statelessWidgetDemo extends StatelessWidget {
   const statelessWidgetDemo({Key? key}) : super(key: key);

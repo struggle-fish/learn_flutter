@@ -37,11 +37,16 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
 
 
 - 钩子函数
-  - initState 初始化
-  - didUpdateWidget
-  - didChangeDependencies 状态依赖更新
-  - build  构建
-  - dispose  销毁
+  - 初始化时期
+    - createState
+    - initState 初始化
+  - 更新时期  
+    - didUpdateWidget  不是一个常用的生命周期，当父组件需要重绘制时候才会调用
+    - didChangeDependencies 状态依赖更新
+    - build  构建 页面内容 会在 didChangeDependencies 之后立即调用 状态更新后也会调用
+  - 销毁时期  
+    - dispose  销毁
+    - deactive
 
 
 初始化列表的目的： 给 final 变量赋值 、校验传递的值
@@ -52,6 +57,7 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
 ### 常用快捷键
 
 - `stl` 快速生成 StatelessWidget
+- `command + n` 快速创建函数方法  
 - `option + enter` 设置包裹 Container
 - `option + command + b` 可以查看所属的所有实现类
 - `option + command + w` 将build 出来的widget 抽取到文件（快捷键不好使，所以鼠标右击吧）

@@ -4,6 +4,10 @@ main() {
   runApp(WidgetLayoutApp());
 }
 
+
+
+
+
 class WidgetLayoutApp extends StatefulWidget {
   const WidgetLayoutApp({Key? key}) : super(key: key);
 
@@ -25,6 +29,12 @@ class _WidgetLayoutAppState extends State<WidgetLayoutApp> {
       home: Scaffold(
         appBar: AppBar(
           title: Text('布局类组件'),
+          leading: GestureDetector(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Icon(Icons.ac_unit),
+          ),
         ),
         body: Container(
           child: Column(
