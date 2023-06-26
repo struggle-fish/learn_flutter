@@ -34,8 +34,6 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
     - 发送网络请求
     - 监听组件中的事件
     - 管理内存（定时器，控制器的销毁等）
-
-
 - 钩子函数
   - 初始化时期
     - createState
@@ -47,6 +45,24 @@ Flutter 中万物皆是 Widget , **在 Flutter 开发中所有的 Widget 都不�
   - 销毁时期  
     - dispose  销毁
     - deactive
+
+
+### App 应用维度的生命周期
+
+- WidgetsBindingOberver 是widgets 绑定观察器，通过他可以监听应用生命周期
+
+```dart
+@override
+void initState() {
+  // TODO: 注意这里需要添加一个观察
+  WidgetsBinding.instance.addObserver(this);
+  super.initState();
+}
+
+```
+
+- AppLifecycleState.paused 进入后台
+- AppLifecycleState.resumed 进入前台
 
 
 初始化列表的目的： 给 final 变量赋值 、校验传递的值
